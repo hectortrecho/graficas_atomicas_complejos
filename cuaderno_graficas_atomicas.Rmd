@@ -1,0 +1,1675 @@
+---
+title: "Estudio de graficas atomicas"
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    theme: united
+---
+
+
+```{r - archivos importados,echo=FALSE}
+source("C:\\Users\\Hector Ramirez\\Documents\\codigo_R\\investigacion_graficas_atomicas\\datos_graficas_atomicas.r") #fuente archivo "datos_graficas_atomicas.r
+
+```
+
+# Graficas atomicas y objetivo de estudio
+<p>Comenzamos con la idea de que estudiar como difieren las estructuras de la graficas atomicas al cambiar la geometria, cuadrada plana y tetraedrica, ambas con estructura M(H<sub>2</sub>O)<sub>4</sub><sup>m+</sup>, y utilizando los datos de las graficas originales octaedricas con estructura M(H<sub>2</sub>O)<sub>6</sub><sup>m+</sup>. </p> 
+<p>El conjunto de graficas atomicas generadas en las tres geometrias escogidas (cuadrado plano, tetraedrico, octaedrico): {Cr<sup>3+</sup>,Cu<sup>2+</sup>,Mn<sup>4+</sup>,Sc<sup>2+</sup>,Sc<sup>3+</sup>,Ti<sup>3+</sup>,Ni<sup>3+</sup>,V<sup>4+</sup>,Zn<sup>2+</sup>} = conjunto con |conjunto| = 9.</p>
+
+## INTRODUCCION DE LOS DATOS OBTENIDOS
+Geometrias:
+```{r - geometrias,echo=FALSE,out.width="33%",out.height="30%",fig.cap="geometrias: cuadrada plana, Tetraedrica, Octaedrica",fig.show='hold',fig.align='center'}
+
+knitr::include_graphics(c("molecula_cuadrada-plana-1.png","molecula_tetraedrica-1.png","molecula_octaedrico-1.png"))
+
+```
+
+### GRAFICAS ATOMICAS
+
+<figure>
+  <img src="O/Sc3_O.png" alt="Sc3_O" style="width:300px;height:300px;">
+  <img src="CP/Sc3_CP.png" alt="Sc3_CP" style="width:300px;height:300px;">
+  <img src="T/Sc3_T.png" alt="Sc3_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Sc3 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Sc2_O.png" alt="Sc2_O" style="width:300px;height:300px;">
+  <img src="CP/Sc2_CP.png" alt="Sc2_CP" style="width:300px;height:300px;">
+  <img src="T/Sc2_T.png" alt="Sc2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Sc2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/V4_O.png" alt="V4_O" style="width:300px;height:300px;">
+  <img src="CP/V4_CP.png" alt="V4_CP" style="width:300px;height:300px;">
+  <img src="T/V4_T.png" alt="V4_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica V4 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Ti3_O.png" alt="Ti3_O" style="width:300px;height:300px;">
+  <img src="CP/Ti3_CP.png" alt="Ti3_CP" style="width:300px;height:300px;">
+  <img src="T/Ti3_T.png" alt="Ti3_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Ti3 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Ti2_O.png" alt="Ti2_O" style="width:300px;height:300px;">
+  <img src="CP/Ti2_CP.png" alt="Ti2_CP" style="width:300px;height:300px;">
+  <img src="T/Ti2_T.png" alt="Ti2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Ti2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/V3_O.png" alt="V3_O" style="width:300px;height:300px;">
+  <img src="CP/V3_CP.png" alt="V3_CP" style="width:300px;height:300px;">
+  <img src="T/V3_T.png" alt="V3_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica V3 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Cr3_O.png" alt="Cr3_O" style="width:300px;height:300px;">
+  <img src="CP/Cr3_CP.png" alt="Cr3_CP" style="width:300px;height:300px;">
+  <img src="T/Cr3_T.png" alt="Cr3_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Cr3 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Mn4_O.png" alt="Mn4_O" style="width:300px;height:300px;">
+  <img src="CP/Mn4_CP.png" alt="Mn4_CP" style="width:300px;height:300px;">
+  <img src="T/Mn4_T.png" alt="Mn4_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Mn4 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/V2_O.png" alt="V2_O" style="width:300px;height:300px;">
+  <img src="CP/V2_CP.png" alt="V2_CP" style="width:300px;height:300px;">
+  <img src="T/V2_T.png" alt="V2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica V2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Cr2_O.png" alt="Cr2_O" style="width:300px;height:300px;">
+  <img src="CP/Cr2_CP.png" alt="Cr2_CP" style="width:300px;height:300px;">
+  <img src="T/Cr2_T.png" alt="Cr2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Cr2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Mn3_O.png" alt="Mn3_O" style="width:300px;height:300px;">
+  <img src="CP/Mn3_CP.png" alt="Mn3_CP" style="width:300px;height:300px;">
+  <img src="T/Mn3_T.png" alt="Mn3_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Mn3 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Fe3_O.png" alt="Fe3_O" style="width:300px;height:300px;">
+  <img src="CP/Fe3_CP.png" alt="Fe3_CP" style="width:300px;height:300px;">
+  <img src="T/Fe3_T.png" alt="Fe3_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Fe3 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Mn2_O.png" alt="Mn2_O" style="width:300px;height:300px;">
+  <img src="CP/Mn2_CP.png" alt="Mn2_CP" style="width:300px;height:300px;">
+  <img src="T/Mn2_T.png" alt="Mn2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Mn2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Fe2_O.png" alt="Fe2_O" style="width:300px;height:300px;">
+  <img src="CP/Fe2_CP.png" alt="Fe2_CP" style="width:300px;height:300px;">
+  <img src="T/Fe2_T.png" alt="Fe2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Fe2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Co2_O.png" alt="Co2_O" style="width:300px;height:300px;">
+  <img src="CP/Co2_CP.png" alt="Co2_CP" style="width:300px;height:300px;">
+  <img src="T/Co2_T.png" alt="Co2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Co2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Ni3_O.png" alt="Ni3_O" style="width:300px;height:300px;">
+  <img src="CP/Ni3_CP.png" alt="Ni3_CP" style="width:300px;height:300px;">
+  <img src="T/Ni3_T.png" alt="Ni3_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Ni3 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Ni2_O.png" alt="Ni2_O" style="width:300px;height:300px;">
+  <img src="CP/Ni2_CP.png" alt="Ni2_CP" style="width:300px;height:300px;">
+  <img src="T/Ni2_T.png" alt="Ni2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Ni2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Cu2_O.png" alt="Cu2_O" style="width:300px;height:300px;">
+  <img src="CP/Cu2_CP.png" alt="Cu2_CP" style="width:300px;height:300px;">
+  <img src="T/Cu2_T.png" alt="Cu2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Cu2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="O/Zn2_O.png" alt="Zn2_O" style="width:300px;height:300px;">
+  <img src="CP/Zn2_CP.png" alt="Zn2_CP" style="width:300px;height:300px;">
+  <img src="T/Zn2_T.png" alt="Zn2_T" style="width:300px;height:300px;">
+  <figcaption>Fig.1 Grafica atomica Zn2 Octaedrica, Cuadrada plana, Tetraedrico
+  </figcaption>
+</figure>
+
+### CLASIFICACION Y TABLA DE DATOS
+
+<figure>
+  <img src="I.png" alt="Graficas estilo Hexaedro" style="width:80px;height:80px;">
+  <img src="II.png" alt="Graficas estilo octaedro" style="width:80px;height:80px;">
+  <img src="III.png" alt="Graficas estilo III" style="width:80px;height:80px;">
+  <img src="IV.png" alt="Graficas estilo IV" style="width:80px;height:80px;">
+  <img src="V.png" alt="Graficas estilo V" style="width:80px;height:80px;">
+  <img src="VI.png" alt="Graficas estilo VI" style="width:80px;height:80px;">
+  <img src="VII.png" alt="Graficas estilo VII" style="width:80px;height:80px;">
+  <img src="VIII.png" alt="Graficas estilo VIII" style="width:80px;height:80px;">
+  <img src="IX.png" alt="Graficas estilo IX" style="width:80px;height:80px;">
+  <figcaption>Fig.20 Tipo de grafica I,II,III,IV,V,VI,VII,VIII,IX </figcaption>
+</figure>
+
+<style>
+th, td {padding: 5px;border-style: dotted;}tr:nth-child(even) {
+  background-color: #D6EEEE;}
+</style>
+<table>
+<thead>
+  <tr>
+    <th>AG </th>
+    <th>Configuracion</th>
+    <th>Conj. Car. [O]</th>
+    <th>Conj. Car. [CP]</th>
+    <th>Conj. Car. [T]</th>
+    <th>(2S+1)[O]</th>
+    <th>(2S+1)[CP]</th>
+    <th>(2S+1)[T]</th>
+    <th>[O]</th>
+    <th>[CP]</th>
+    <th>[T]</th>
+    <th>|[O]|</th>
+    <th>|[CP]|</th>
+    <th>|[T]|</th>
+    <th>&#967;(O)</th>
+    <th>&#967;(CP)</th>
+    <th>&#967;(T)</th>
+  </tr>
+</thead>
+<tbody> 
+  <tr>
+    <td>Sc<sup>3+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>0</sup></td>
+    <td>[6(4),12,8]</td>
+    <td>[6,10,6]</td>
+    <td>[4(3),6,4]</td>
+    <td>5</td>
+    <td>1</td>
+    <td>1</td>
+    <th>II</th>
+    <th>IV</th>
+    <th>IX</th>
+    <th>0</th>
+    <th>0</th>
+    <th>-3</th>
+    <th>3</th>
+    <th>3</th>
+    <th>4</th>
+  </tr>
+  <tr>
+    <td>Sc<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>1</sup></td>
+    <td>[8(3),12,6]</td>
+    <td>[6,10,6]</td>
+    <td>[6,8,4]</td>
+    <td>4</td>
+    <td>4</td>
+    <td>2</td>
+    <th>I</th>
+    <th>IV</th>
+    <th>III</th>
+    <th>9</th>
+    <th>0</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>2</th>
+  </tr>
+  <tr>
+    <td>V<sup>4+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>1</sup></td>
+    <td>[8(3),12,6]</td>
+    <td>[6(4),12,8]</td>
+    <td>[6,8,4]</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <th>I</th>
+    <th>II</th>
+    <th>III</th>
+    <th>9</th>
+    <th>0</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>2</th>
+  </tr>
+  <tr>
+    <td>Ti<sup>3+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>1</sup></td>
+    <td>[8(3),12,6]</td>
+    <td>[6(4),12,8]</td>
+    <td>[8,10,4]</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <th>I</th>
+    <th>II</th>
+    <th>VIII</th>
+    <th>9</th>
+    <th>0</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Ti<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>2</sup></td>
+    <td>[6(4),12,8]</td>
+    <td>[6(4),12,8]</td>
+    <td>[6(4),12,8]</td>
+    <td>1</td>
+    <td>1</td>
+    <td>3</td>
+    <th>II</th>
+    <th>II</th>
+    <th>II</th>
+    <th>0</th>
+    <th>0</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>V<sup>3+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>2</sup></td>
+    <td>[6(4),12,8]</td>
+    <td>[6(4),12,8]</td>
+    <td>[6(4),12,8]</td>
+    <td>1</td>
+    <td>3</td>
+    <td>3</td>
+    <th>II</th>
+    <th>II</th>
+    <th>II</th>
+    <th>0</th>
+    <th>0</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Cr<sup>3+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>3</sup></td>
+    <td>[8(3),12,6]</td>
+    <td>[8(3),12,6]</td>
+    <td>[6(4),12,8]</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <th>I</th>
+    <th>I</th>
+    <th>II</th>
+    <th>9</th>
+    <th>9</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Mn<sup>4+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>3</sup></td>
+    <td>[8(3),12,6]</td>
+    <td>[8(3),12,6]</td>
+    <td>[6(4),12,8]</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <th>I</th>
+    <th>I</th>
+    <th>II</th>
+    <th>9</th>
+    <th>9</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>V<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>3</sup></td>
+    <td>[8(3),12,6]</td>
+    <td>[8(3),12,6]</td>
+    <td>[6(4),12,8]</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <th>I</th>
+    <th>I</th>
+    <th>II</th>
+    <th>9</th>
+    <th>9</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Cr<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>4</sup></td>
+    <td>[4(4),8,6]</td>
+    <td>[6(4),12,8]</td>
+    <td>[6(4),12,8]</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <th>V</th>
+    <th>II</th>
+    <th>II</th>
+    <th>0</th>
+    <th>0</th>
+    <th>0</th>
+    <th>2</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Mn<sup>3+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>4</sup></td>
+    <td>[6,8,4]</td>
+    <td>[6(4),12,8]</td>
+    <td>[6(4),12,8]</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <th>III</th>
+    <th>II</th>
+    <th>II</th>
+    <th>0</th>
+    <th>9</th>
+    <th>0</th>
+    <th>2</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Fe<sup>3+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>5</sup></td>
+    <td>[6(4),12,8]</td>
+    <td>[4(4),8,6]</td>
+    <td>[6,10,6]</td>
+    <td>4</td>
+    <td>4</td>
+    <td>2</td>
+    <th>II</th>
+    <th>V</th>
+    <th>IV</th>
+    <th>0</th>
+    <th>0</th>
+    <th>0</th>
+    <th>3</th>
+    <th>2</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Mn<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>5</sup></td>
+    <td>[6(4),12,8]</td>
+    <td>[4,6,4]</td>
+    <td>[6,10,6]</td>
+    <td>4</td>
+    <td>4</td>
+    <td>2</td>
+    <th>II</th>
+    <th>VI</th>
+    <th>IV</th>
+    <th>0</th>
+    <th>9</th>
+    <th>0</th>
+    <th>3</th>
+    <th>2</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Fe<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>6</sup></td>
+    <td>[6,8,4]</td>
+    <td>[8(3),12,6]</td>
+    <td>[8(3),12,6]</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <th>III</th>
+    <th>I</th>
+    <th>I</th>
+    <th>0</th>
+    <th>0</th>
+    <th>9</th>
+    <th>2</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Co<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>7</sup></td>
+    <td>[8(3),12,6]</td>
+    <td>[8(3),12,6]</td>
+    <td>[6(4),12,8]</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <th>I</th>
+    <th>I</th>
+    <th>II</th>
+    <th>9</th>
+    <th>9</th>
+    <th>0</th>
+    <th>3</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Ni<sup>3+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>7</sup></td>
+    <td>[6(4),12,8]</td>
+    <td>[8(3),12,6]</td>
+    <td>[8(3),12,6]</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <th>II</th>
+    <th>I</th>
+    <th>I</th>
+    <th>0</th>
+    <th>9</th>
+    <th>9</th>
+    <th>3</th>
+    <th>3</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Ni<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>8</sup></td>
+    <td>[8(3),12,6]</td>
+    <td>[4(4),8,6]</td>
+    <td>[8(3),12,6]</td>
+    <td>1</td>
+    <td>3</td>
+    <td>3</td>
+    <th>I</th>
+    <th>V</th>
+    <th>I</th>
+    <th>9</th>
+    <th>9</th>
+    <th>9</th>
+    <th>3</th>
+    <th>2</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Cu<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>9</sup></td>
+    <td>[4(4),8,6]</td>
+    <td>[4(4),8,6]</td>
+    <td>[5,7,5]</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <th>V</th>
+    <th>V</th>
+    <th>VII</th>
+    <th>0</th>
+    <th>0</th>
+    <th>-2</th>
+    <th>2</th>
+    <th>2</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>Zn<sup>2+</sup></td>
+    <td>[Ar]4s<sup>0</sup>4d<sup>10</sup></td>
+    <td>[6(4),12,8]</td>
+    <td>[4(4),8,6]</td>
+    <td>[4(3),6,4]</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <th>II</th>
+    <th>V</th>
+    <th>IX</th>
+    <th>0</th>
+    <th>0</th>
+    <th>-3</th>
+    <th>3</th>
+    <th>2</th>
+    <th>4</th>
+  </tr>
+</tbody>
+</table>  
+
+```{r - distribucion graficas,echo=FALSE}
+conteo_total <- c(17,21,4,4,6,1,1,1,2)
+conteo_O <- c(8,7,2,0,2,0,0,0,0)
+conteo_T <- c(3,8,2,2,0,0,1,1,2)
+conteo_CP <- c(6,6,0,2,4,1,0,0,0)
+
+pie(conteo_total,labels = c("I","II","III","IV","V","VI","VII","VIII","IX"),main = "Distribucion Total")
+
+
+par(mfrow = c(1,3))
+pie(conteo_O,labels = c("I","II","III","IV","V","VI","VII","VIII","IX"),main = "Octaedro")
+pie(conteo_T,labels = c("I","II","III","IV","V","VI","VII","VIII","IX"),main = "Tetraedrico")
+pie(conteo_CP,labels = c("I","II","III","IV","V","VI","VII","VIII","IX"),main = "Cuadrado Plano")
+
+
+```
+## ANALISIS DE LAS GRAFICAS ATOMICAS POR CLASSIFICACION:
+### I
+<figure>
+  <img src="I.png" alt="Graficas estilo Hexaedro" style="width:100px;height:100px;">
+</figure
+
+
+
+## GRAFICAS CUADRADA PLANA  A OCTAEDRICA
+
+
+```{r - graficas CP octaedrica,echo=FALSE}
+
+par(mfrow = c(2,2))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[1]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[1]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[2]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[2]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[3]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[3]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[4]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[4]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[5]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[5]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[6]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[6]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[7]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[7]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[8]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[8]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[9]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[9]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[10]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[10]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[11]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[11]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[12]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[12]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[13]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[13]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[14]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[14]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[15]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[15]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[16]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[16]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[17]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[17]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[18]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[18]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[19]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[19]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[20]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[20]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[21]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[21]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[22]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[22]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[23]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[23]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[24]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[24]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[25]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[25]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[26]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[26]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[27]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[27]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[28]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[28]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[29]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[29]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[30]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[30]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[31]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[31]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[32]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[32]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[33]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[33]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[34]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[34]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[35]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[35]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[36]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[36]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[37]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[37]))
+plot.igraph(lista_graficas_cuadrada_plana_octaedrica[[38]],xlab = names(lista_graficas_cuadrada_plana_octaedrica[38]))
+```
+
+## GRAFICAS TETRAEDRICO A OCTAEDRICO
+
+```{r - graficas de tetraedrico a octaedrico, echo=FALSE}
+
+par(mfrow = c(2,2))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[1]],xlab = names(lista_graficas_tetraedrico_octaedrica[1]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[2]],xlab = names(lista_graficas_tetraedrico_octaedrica[2]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[3]],xlab = names(lista_graficas_tetraedrico_octaedrica[3]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[4]],xlab = names(lista_graficas_tetraedrico_octaedrica[4]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[5]],xlab = names(lista_graficas_tetraedrico_octaedrica[5]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[6]],xlab = names(lista_graficas_tetraedrico_octaedrica[6]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[7]],xlab = names(lista_graficas_tetraedrico_octaedrica[7]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[8]],xlab = names(lista_graficas_tetraedrico_octaedrica[8]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[9]],xlab = names(lista_graficas_tetraedrico_octaedrica[9]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[10]],xlab = names(lista_graficas_tetraedrico_octaedrica[10]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[11]],xlab = names(lista_graficas_tetraedrico_octaedrica[11]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[12]],xlab = names(lista_graficas_tetraedrico_octaedrica[12]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[13]],xlab = names(lista_graficas_tetraedrico_octaedrica[13]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[14]],xlab = names(lista_graficas_tetraedrico_octaedrica[14]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[15]],xlab = names(lista_graficas_tetraedrico_octaedrica[15]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[16]],xlab = names(lista_graficas_tetraedrico_octaedrica[16]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[17]],xlab = names(lista_graficas_tetraedrico_octaedrica[17]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[18]],xlab = names(lista_graficas_tetraedrico_octaedrica[18]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[19]],xlab = names(lista_graficas_tetraedrico_octaedrica[19]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[20]],xlab = names(lista_graficas_tetraedrico_octaedrica[20]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[21]],xlab = names(lista_graficas_tetraedrico_octaedrica[21]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[22]],xlab = names(lista_graficas_tetraedrico_octaedrica[22]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[23]],xlab = names(lista_graficas_tetraedrico_octaedrica[23]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[24]],xlab = names(lista_graficas_tetraedrico_octaedrica[24]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[25]],xlab = names(lista_graficas_tetraedrico_octaedrica[25]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[26]],xlab = names(lista_graficas_tetraedrico_octaedrica[26]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[27]],xlab = names(lista_graficas_tetraedrico_octaedrica[27]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[28]],xlab = names(lista_graficas_tetraedrico_octaedrica[28]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[29]],xlab = names(lista_graficas_tetraedrico_octaedrica[29]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[30]],xlab = names(lista_graficas_tetraedrico_octaedrica[30]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[31]],xlab = names(lista_graficas_tetraedrico_octaedrica[31]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[32]],xlab = names(lista_graficas_tetraedrico_octaedrica[32]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[33]],xlab = names(lista_graficas_tetraedrico_octaedrica[33]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[34]],xlab = names(lista_graficas_tetraedrico_octaedrica[34]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[35]],xlab = names(lista_graficas_tetraedrico_octaedrica[35]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[36]],xlab = names(lista_graficas_tetraedrico_octaedrica[36]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[37]],xlab = names(lista_graficas_tetraedrico_octaedrica[37]))
+plot.igraph(lista_graficas_tetraedrico_octaedrica[[38]],xlab = names(lista_graficas_tetraedrico_octaedrica[38]))
+```
+
+
+## GRAFICAS CUADRADA PLANA,TETRAEDRICA Y OCTAEDRICA
+
+Graficas de geometria cuadrada plana, tetraedrica y octaedrica:
+```{r - graficas en las tres geometrias,echo=FALSE}
+par(mfrow = c(1,3))
+plot.igraph(lista_graficas_geometrias[[1]],xlab = names(lista_graficas_geometrias[1]))
+plot.igraph(lista_graficas_geometrias[[2]],xlab = names(lista_graficas_geometrias[2]))
+plot.igraph(lista_graficas_geometrias[[3]],xlab = names(lista_graficas_geometrias[3]))
+plot.igraph(lista_graficas_geometrias[[4]],xlab = names(lista_graficas_geometrias[4]))
+plot.igraph(lista_graficas_geometrias[[5]],xlab = names(lista_graficas_geometrias[5]))
+plot.igraph(lista_graficas_geometrias[[6]],xlab = names(lista_graficas_geometrias[6]))
+plot.igraph(lista_graficas_geometrias[[7]],xlab = names(lista_graficas_geometrias[7]))
+plot.igraph(lista_graficas_geometrias[[8]],xlab = names(lista_graficas_geometrias[8]))
+plot.igraph(lista_graficas_geometrias[[9]],xlab = names(lista_graficas_geometrias[9]))
+plot.igraph(lista_graficas_geometrias[[10]],xlab = names(lista_graficas_geometrias[10]))
+plot.igraph(lista_graficas_geometrias[[11]],xlab = names(lista_graficas_geometrias[11]))
+plot.igraph(lista_graficas_geometrias[[12]],xlab = names(lista_graficas_geometrias[12]))
+plot.igraph(lista_graficas_geometrias[[13]],xlab = names(lista_graficas_geometrias[13]))
+plot.igraph(lista_graficas_geometrias[[14]],xlab = names(lista_graficas_geometrias[14]))
+plot.igraph(lista_graficas_geometrias[[15]],xlab = names(lista_graficas_geometrias[15]))
+plot.igraph(lista_graficas_geometrias[[16]],xlab = names(lista_graficas_geometrias[16]))
+plot.igraph(lista_graficas_geometrias[[17]],xlab = names(lista_graficas_geometrias[17]))
+plot.igraph(lista_graficas_geometrias[[18]],xlab = names(lista_graficas_geometrias[18]))
+plot.igraph(lista_graficas_geometrias[[19]],xlab = names(lista_graficas_geometrias[19]))
+plot.igraph(lista_graficas_geometrias[[20]],xlab = names(lista_graficas_geometrias[20]))
+plot.igraph(lista_graficas_geometrias[[21]],xlab = names(lista_graficas_geometrias[21]))
+plot.igraph(lista_graficas_geometrias[[22]],xlab = names(lista_graficas_geometrias[22]))
+plot.igraph(lista_graficas_geometrias[[23]],xlab = names(lista_graficas_geometrias[23]))
+plot.igraph(lista_graficas_geometrias[[24]],xlab = names(lista_graficas_geometrias[24]))
+plot.igraph(lista_graficas_geometrias[[25]],xlab = names(lista_graficas_geometrias[25]))
+plot.igraph(lista_graficas_geometrias[[26]],xlab = names(lista_graficas_geometrias[26]))
+plot.igraph(lista_graficas_geometrias[[27]],xlab = names(lista_graficas_geometrias[27]))
+plot.igraph(lista_graficas_geometrias[[28]],xlab = names(lista_graficas_geometrias[28]))
+plot.igraph(lista_graficas_geometrias[[29]],xlab = names(lista_graficas_geometrias[29]))
+plot.igraph(lista_graficas_geometrias[[30]],xlab = names(lista_graficas_geometrias[30]))
+plot.igraph(lista_graficas_geometrias[[31]],xlab = names(lista_graficas_geometrias[31]))
+plot.igraph(lista_graficas_geometrias[[32]],xlab = names(lista_graficas_geometrias[32]))
+plot.igraph(lista_graficas_geometrias[[33]],xlab = names(lista_graficas_geometrias[33]))
+plot.igraph(lista_graficas_geometrias[[34]],xlab = names(lista_graficas_geometrias[34]))
+plot.igraph(lista_graficas_geometrias[[35]],xlab = names(lista_graficas_geometrias[35]))
+plot.igraph(lista_graficas_geometrias[[36]],xlab = names(lista_graficas_geometrias[36]))
+plot.igraph(lista_graficas_geometrias[[37]],xlab = names(lista_graficas_geometrias[37]))
+plot.igraph(lista_graficas_geometrias[[38]],xlab = names(lista_graficas_geometrias[38]))
+plot.igraph(lista_graficas_geometrias[[39]],xlab = names(lista_graficas_geometrias[39]))
+plot.igraph(lista_graficas_geometrias[[40]],xlab = names(lista_graficas_geometrias[40]))
+plot.igraph(lista_graficas_geometrias[[41]],xlab = names(lista_graficas_geometrias[41]))
+plot.igraph(lista_graficas_geometrias[[42]],xlab = names(lista_graficas_geometrias[42]))
+plot.igraph(lista_graficas_geometrias[[43]],xlab = names(lista_graficas_geometrias[43]))
+plot.igraph(lista_graficas_geometrias[[44]],xlab = names(lista_graficas_geometrias[44]))
+plot.igraph(lista_graficas_geometrias[[45]],xlab = names(lista_graficas_geometrias[45]))
+plot.igraph(lista_graficas_geometrias[[46]],xlab = names(lista_graficas_geometrias[46]))
+plot.igraph(lista_graficas_geometrias[[47]],xlab = names(lista_graficas_geometrias[47]))
+plot.igraph(lista_graficas_geometrias[[48]],xlab = names(lista_graficas_geometrias[48]))
+plot.igraph(lista_graficas_geometrias[[49]],xlab = names(lista_graficas_geometrias[49]))
+plot.igraph(lista_graficas_geometrias[[50]],xlab = names(lista_graficas_geometrias[50]))
+plot.igraph(lista_graficas_geometrias[[51]],xlab = names(lista_graficas_geometrias[51]))
+plot.igraph(lista_graficas_geometrias[[52]],xlab = names(lista_graficas_geometrias[52]))
+plot.igraph(lista_graficas_geometrias[[53]],xlab = names(lista_graficas_geometrias[53]))
+plot.igraph(lista_graficas_geometrias[[54]],xlab = names(lista_graficas_geometrias[54]))
+plot.igraph(lista_graficas_geometrias[[55]],xlab = names(lista_graficas_geometrias[55]))
+plot.igraph(lista_graficas_geometrias[[56]],xlab = names(lista_graficas_geometrias[56]))
+plot.igraph(lista_graficas_geometrias[[57]],xlab = names(lista_graficas_geometrias[57]))
+```
+
+## PROPIEDADES CALCULADAS A LA MATRIZ DE ADYACENCIA DE LAS GRAFICAS.
+
+### determinante de matriz de adyacencia:
+```{r - determinante,echo=FALSE}
+lista_det_geometrias <- sapply(lista_matriz_adyacencia_geometrias, det)
+print(lista_det_geometrias)
+```
+
+### matriz adjunta:
+```{r - matriz adjunta,echo=FALSE}
+lista_adjunta_geometrias <- sapply(lista_matriz_adyacencia_geometrias, adjoint)
+print(lista_adjunta_geometrias)
+```
+### matriz inversa:
+```{r - matriz inversa,echo=FALSE}
+
+lista_inversa_geometrias <- list()
+for (matriz in lista_matriz_adyacencia_geometrias) {
+  if (det(matriz) != 0 ) {
+    lista_inversa_geometrias <- list.append(lista_inversa_geometrias,inv(matriz))
+  } else {
+     lista_inversa_geometrias <- list.append(lista_inversa_geometrias,"NA")
+    }
+}
+
+print(lista_inversa_geometrias)
+
+```
+
+### eigenvalue:
+```{r - eigenvalue,echo=FALSE}
+
+lista_eigenvalue_geometrias <- list()
+for (matriz in lista_matriz_adyacencia_geometrias) {
+  lista_eigenvalue_geometrias <- list.append(lista_eigenvalue_geometrias,eigen(matriz)$value)
+}
+print(lista_eigenvalue_geometrias)
+
+```
+
+### eigenvector:
+```{r - eigenvectors,echo=FALSE}
+
+lista_eigenvector_geometrias <- list()
+for (matriz in lista_matriz_adyacencia_geometrias) {
+  lista_eigenvector_geometrias <- list.append(lista_eigenvector_geometrias,eigen(matriz)$vectors)
+}
+print(lista_eigenvector_geometrias)
+
+```
+#### Rango:
+```{r - rank,echo=FALSE}
+
+lista_rank_geometrias <- sapply(lista_matriz_adyacencia_geometrias, R)
+print(lista_rank_geometrias)
+
+```
+
+### caminos:
+
+A<sup>n</sup>
+
+#### n = 2
+```{r - camino 2 pasos,echo=FALSE}
+
+lista_camino2_geometrias <- list()
+for (matriz in lista_matriz_adyacencia_geometrias) {
+  lista_camino2_geometrias <- list.append(lista_camino2_geometrias,matriz %*% matriz)
+}
+
+print(lista_camino2_geometrias)
+
+```
+#### n = 3
+```{r - camino 3 pasos,echo=FALSE}
+
+lista_camino3_geometrias <- list()
+for (matriz in lista_matriz_adyacencia_geometrias) {
+  lista_camino3_geometrias <- list.append(lista_camino3_geometrias,matriz %*% matriz%*% matriz)
+}
+
+print(lista_camino3_geometrias)
+
+```
+#### n = 4
+```{r - camino 4 pasos,echo=FALSE}
+
+lista_camino4_geometrias <- list()
+for (matriz in lista_matriz_adyacencia_geometrias) {
+  lista_camino4_geometrias <- list.append(lista_camino4_geometrias,matriz %*% matriz %*% matriz %*% matriz)
+}
+
+print(lista_camino4_geometrias)
+
+```
+#### n = 5
+```{r - camino 5 pasos,echo=FALSE}
+
+lista_camino5_geometrias <- list()
+for (matriz in lista_matriz_adyacencia_geometrias) {
+  lista_camino5_geometrias <- list.append(lista_camino5_geometrias,matriz %*% matriz %*% matriz %*% matriz %*% matriz)
+}
+
+print(lista_camino5_geometrias)
+
+```
+### POLINOMIO CARACTERISTICO DE LA MATRIZ SIMETRICA:
+```{r - polinomio caracteristico,echo=FALSE}
+
+lista_polynomio_geometrias <- sapply(lista_matriz_adyacencia_geometrias, charpoly)
+print(lista_polynomio_geometrias)
+
+```
+
+
+
+
+## MATRIZ DE INCIDENCIA
+### matriz inversa:
+```{r - matriz inversa de incidencia,echo=FALSE}
+lista_inversa_incidencia_geometrias <- sapply(lista_matriz_incidencia_geometrias, Ginv)
+print(lista_inversa_incidencia_geometrias)
+
+```
+
+
+# PROPIEDADES DE TEORIA DE GRAFICA
+
+## DEGREE:
+```{r - degree,echo=FALSE}
+
+lista_grado_geometrias <- sapply(lista_graficas_geometrias, degree)
+print(lista_grado_geometrias)
+
+```
+## COLORACION DE VERTICES:
+```{r - coloracion,echo=FALSE}
+num_color  <- function(grafica) { max(greedy_vertex_coloring(grafica))}
+
+lista_coloracion_geometrias <- sapply(lista_graficas_geometrias, num_color)
+print(lista_coloracion_geometrias)
+```
+
+
+
+## CICLO EULERIANO
+```{r - ciclo euleriano,echo=FALSE}
+
+lista_ciclo_euleriano_geometrias <- list()
+for (grafica in lista_graficas_geometrias) {
+  if (has_eulerian_cycle(grafica) == TRUE) {
+    lista_ciclo_euleriano_geometrias <- list.append(lista_ciclo_euleriano_geometrias,has_eulerian_cycle(grafica))
+  } else {
+    lista_ciclo_euleriano_geometrias <- list.append(lista_ciclo_euleriano_geometrias,"NO EXISTE")
+  }
+}
+print(lista_ciclo_euleriano_geometrias)
+
+```
+
+## BIPARTITA
+
+código para determinar si las gráficas son bipartita,
+
+```{r - bipartita,echo=FALSE}
+bipartita <- function(graficas) {bipartite_mapping(graficas)$res}
+
+lista_graficas_bipartita <- sapply(lista_graficas_geometrias,bipartita)
+print(lista_graficas_bipartita)
+
+```
+
+
+## MATRIZ LAPLACIANA
+L = D-A
+
+```{r - Laplacian Matrix,echo=FALSE}
+det_lap  <- function(matriz) {det(as.matrix(matriz))}
+
+lista_matriz_laplaciana <- sapply(lista_graficas_geometrias, laplacian_matrix)
+lista_det_laplaciana <- sapply(lista_matriz_laplaciana,det_lap)
+
+print(lista_matriz_laplaciana)
+print(lista_det_laplaciana)
+
+```
+# MOLECULAS CON GEOMETRIA CP,T,O
+
+### Momento Cuadrupolar
+
+```{r - Momento Cuadropolar,echo=FALSE}
+propiedades_moleculas <- propiedades_moleculas %>% mutate('|Q|' = (sqrt((2/3)*(propiedades_moleculas$Q_XX**2)+(propiedades_moleculas$Q_YY**2)+(propiedades_moleculas$Q_ZZ**2))))
+propiedades_moleculas <- propiedades_moleculas %>% transform(`file` =  c('Co2_CP','Co2_T','Co2_O','Cr2_CP','Cr2_T','Cr3_CP','Cr3_T','Cr2_O','Cu2_CP','Cu2_T','Cu2_O','Fe2_CP','Fe2_T','Fe3_CP','Fe3_T','Fe3_O','Mn2_CP','Mn2_T','Mn3_CP','Mn3_T','Mn4_CP','Mn4_T','Mn2_0','Ni2_CP','Ni2_T','Ni3_CP','Ni3_T','Ni2_O','Ni3_O','Sc2_CP','Sc2_T','Sc3_CP','Sc3_T','Ti2_CP','Ti2_T','Ti3_CP','Ti3_T','Ti2_O','V2_CP','V2_T','V3_CP','V3_T','V4_CP','V4_T','V2_O','Zn2_CP','Zn2_T','Zn2_O')) %>% rename(`molecula` = `file`)
+propiedades_moleculas <- propiedades_moleculas %>% mutate('clase' = c('I','II','I','II','II','I','II','V','V','VII','V','I','I','V','IV','II','VI','IV','II','II','I','II','II','I','I','I','I','I','II','IV','III','IV','IX','II','II','II','VIII','II','I','II','II','II','II','III','I','V','IX','II'))
+
+print(propiedades_moleculas)
+
+```
+buscando correlaciones entre las variables:
+```{r - pearson coefficient matrix,echo=FALSE}
+#matriz de perason de coefficiente negativos son cero correlacion, 1 correlacion lineal absoluta entre dos variables.
+cor(propiedades_moleculas[,c("N","LI","X.Loc","DI","X.Deloc","Q_XX","Q_XY","Q_XZ","Q_YY","Q_YZ","Q_ZZ","DI_Bond","DI_NonBond","q","L","K","K_Scaled","Mu_Intra","Ee","T","Ven","X.Q.")])
+```
+
+
+graficando propiedades:
+```{r - grafica de propiedades moleculares,echo=FALSE}
+
+clase_I <- propiedades_moleculas %>% filter(`clase` == '1')
+clase_II <- propiedades_moleculas %>% filter(`clase` == '2')
+clase_III <- propiedades_moleculas %>% filter(`clase` == '3')
+clase_IV <- propiedades_moleculas %>% filter(`clase` == '4')
+clase_V <- propiedades_moleculas %>% filter(`clase` == '5')
+clase_VI <- propiedades_moleculas %>% filter(`clase` == '6')
+clase_VII <- propiedades_moleculas %>% filter(`clase` == '7')
+clase_VIII <- propiedades_moleculas %>% filter(`clase` == '8')
+clase_IX <- propiedades_moleculas %>% filter(`clase` == '9')
+
+```
+
+
+
+### Propiedades en CP
+
+Distribucion de los datos:
+```{r - distribucion datos,echo=FALSE}
+
+propiedades_sNA_CP <- propiedades_CP %>% na.omit()
+propiedades_prom_CP 
+
+par(mfrow = c(1,3))
+ggplot(data = propiedades_sNA_CP) + geom_bar(mapping = aes(x = Clase))
+ggplot(data = propiedades_sNA_CP,mapping = aes(x = `Ven(r)`)) + geom_histogram()
+ggplot(data = propiedades_sNA_CP,mapping = aes(x = `Vrep(r)`)) + geom_histogram()
+ggplot(data = propiedades_sNA_CP,mapping = aes(x = `DistFromNuc`,y = `DelSqRho`,colour = `Atom`)) + geom_line()
+
+#MAPA DE CALOR DE CORRELACION DE VARIABLES.
+df6 <- propiedades_CP %>% subset(select = c(`No`,`No_CP`,`Clase`,`Atom_no`,`LaCp_type_no`,`DistFromNuc`,`Rho`,`DelSqRho`,`|GradDelSqRho|`,`X`,`Y`,`Z`,`Ven(r)`,`Vrep(r)`,`G(r)`,`K(r)`,`L(r)`)) %>% na.omit()  
+cor6 <- round(cor(df6),2) 
+melt_cor6 <- melt(cor6)
+ggplot(data = melt_cor6, aes(x=Var1, y=Var2,fill=value)) + geom_tile() + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) + geom_text(aes(Var2, Var1, label = value),color = "black", size = 1)
+
+
+```
+
+analizando cada gráfica
+```{r - graficas atomicas,echo=FALSE}
+
+propiedades_AG <- propiedades_CP %>% na.omit()
+#Dividir los datos en quantiles.
+X_Q <- quantile(propiedades_AG$`Ven(r)`,probs = c(.25,.75),na.rm = TRUE)
+iqr_1 <- IQR(propiedades_AG$`Ven(r)`)
+prop_CP_out <- subset(propiedades_AG,propiedades_AG$`Ven(r)` > (X_Q[1]-1.5*iqr_1) & propiedades_AG$`Ven(r)` < (X_Q[2]+1.5*iqr_1))
+#Graficando los datos. 
+prop_CP_out <- prop_CP_out %>% filter(`Atom` == c('Cu2_CP','Cu2_T','Cu2_O') & `LapCP Type` == '(3,+3)')
+ggplot(data = prop_CP_out,mapping = aes(x = `No_CP`, y = `G(r)`,colour = `Atom`)) + geom_line() + ggtitle('G(r) distribucion de (3,+3) en AG: Cu2')
+
+
+```
+
+
+Propiedades estadisticas: 
+```{r - Ven por clase,echo=FALSE}
+
+propiedades_sNA_CP %>% select(-c(,'|GradDelSqRho|','X','Y','Z')) %>% filter(Clase == 'I') %>% na.omit() %>% summary() 
+
+```
+
+### Removiendo outliers para analisis de datos:
+
+```{r - removing outliers full set, echo=FALSE}
+
+Q <- quantile(propiedades_sNA_CP$`Vrep(r)`,probs = c(.25,.75),na.rm = FALSE)
+iqr <- IQR(propiedades_sNA_CP$`Vrep(r)`)
+
+up <- Q[2]+1.5*iqr
+low <- Q[1]-1.5*iqr
+
+eliminated <- subset(propiedades_sNA_CP,propiedades_sNA_CP$`Vrep(r)` > (Q[1]-1.5*iqr) & propiedades_sNA_CP$`Vrep(r)` < (Q[2]+1.5*iqr))
+#ggbetweenstats(eliminated,`DistFromNuc`,`Vrep(r)`,outlier.tagging = TRUE)
+
+```
+
+
+```{r - creando dataframe por clase,echo=FALSE}
+
+#clase I
+I <- eliminated %>% filter(Clase == 'I')
+I_3_1 <- I %>% filter(`LapCP Type` == '(3,+1)')
+I_3_3 <- I %>% filter(`LapCP Type` == '(3,+3)')
+#clase II
+II <- eliminated %>% filter(Clase == 'II')
+II_3_1 <- II %>% filter(`LapCP Type` == '(3,+1)')
+II_3_3 <- II %>% filter(`LapCP Type` == '(3,+3)')
+#clase III
+III <- eliminated %>% filter(Clase == 'III')
+III_3_1 <- III %>% filter(`LapCP Type` == '(3,+1)')
+III_3_3 <- III %>% filter(`LapCP Type` == '(3,+3)')
+#clase IV
+IV <- eliminated %>% filter(Clase == 'IV')
+IV_3_1 <- IV %>% filter(`LapCP Type` == '(3,+1)')
+IV_3_3 <- IV %>% filter(`LapCP Type` == '(3,+3)')
+#clase V
+V <- eliminated %>% filter(Clase == 'V')
+V_3_1 <- V %>% filter(`LapCP Type` == '(3,+1)')
+V_3_3 <- V %>% filter(`LapCP Type` == '(3,+3)')
+#clase VI
+VI <- eliminated %>% filter(Clase == 'VI')
+VI_3_1 <- VI %>% filter(`LapCP Type` == '(3,+1)')
+VI_3_3 <- VI %>% filter(`LapCP Type` == '(3,+3)')
+#clase VII
+VII <- eliminated %>% filter(Clase == 'VII')
+VII_3_1 <- VII %>% filter(`LapCP Type` == '(3,+1)')
+VII_3_3 <- VII %>% filter(`LapCP Type` == '(3,+3)')
+#clase VIII
+VIII <- eliminated %>% filter(Clase == 'VIII')
+VIII_3_1 <- VIII %>% filter(`LapCP Type` == '(3,+1)')
+VIII_3_3 <- VIII %>% filter(`LapCP Type` == '(3,+3)')
+#clase IX
+IX <- eliminated %>% filter(Clase == 'IX')
+IX_3_1 <- IX %>% filter(`LapCP Type` == '(3,+1)')
+IX_3_3 <- IX %>% filter(`LapCP Type` == '(3,+3)')
+
+```
+
+### CLASE I:
+
+```{r - Analisis de clase I,echo=FALSE}
+#(3,+3)
+ggplot(data = I_3_3,aes(x = `Atomic LapCP #`,y = `Vrep(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): Vrep')
+ggplot(data = I_3_3,aes(x = `Atomic LapCP #`,y = `Ven(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): Ven')
+ggplot(data = I_3_3,aes(x = `Atomic LapCP #`,y = `G(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): G(r)')
+ggplot(data = I_3_3,aes(x = `Atomic LapCP #`,y = `K(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): K(r)')
+#(3,+1)
+ggplot(data = I_3_1,aes(x = `Atomic LapCP #`,y = `Vrep(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): Vrep')
+ggplot(data = I_3_1,aes(x = `Atomic LapCP #`,y = `Ven(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): Ven')
+ggplot(data = I_3_1,aes(x = `Atomic LapCP #`,y = `G(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): G(r)')
+ggplot(data = I_3_1,aes(x = `Atomic LapCP #`,y = `K(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): K(r)')
+#Molecula
+ggplot(data=clase_I,aes(x = `Molecula`,y = `N`)) + geom_point() + ggtitle('N(A)')
+ggplot(data=clase_I,aes(x = `Molecula`,y = `X.Q.`)) + geom_point() + ggtitle('|Q|')
+ggplot(data=clase_I,aes(x = `Molecula`,y = `q`)) + geom_point() + ggtitle('q')
+ggplot(data=clase_I,aes(x = `Molecula`,y = `Ven`)) + geom_point() + ggtitle('Ven')
+ggplot(data=clase_I,aes(x = `Molecula`,y = `K`)) + geom_point() + ggtitle('K')
+ggplot(data=clase_I,aes(x = `Molecula`,y = `L`)) + geom_point() + ggtitle('L')
+#analisis de la propiedad de la molecula.
+prop_mol_I  <- propiedades_moleculas %>% filter(`clase` == 1)
+ggplot(data = prop_mol_I,mapping = aes(x = `No`, y = `Q1`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('Q1(tipo I)')
+ggplot(data = prop_mol_I,mapping = aes(x = `No`, y = `Q2`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('Q2(tipo I)')
+ggplot(data = prop_mol_I,mapping = aes(x = `No`, y = `Q3`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('Q3(tipo I)')
+ggplot(data = prop_mol_I,mapping = aes(x = `No`, y = `q`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('q(tipo I)')
+ggplot(data = prop_mol_I,mapping = aes(x = `No`, y = `N`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('N(tipo I)')
+
+```
+### CLASE II
+
+```{r - Analisis de clase II,echo=FALSE}
+#(3,+3)
+ggplot(data = II_3_3,aes(x = `Atomic LapCP #`,y = `Vrep(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): Vrep')
+ggplot(data = II_3_3,aes(x = `Atomic LapCP #`,y = `Ven(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): Ven')
+ggplot(data = II_3_3,aes(x = `Atomic LapCP #`,y = `G(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): G(r)')
+ggplot(data = II_3_3,aes(x = `Atomic LapCP #`,y = `K(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): K(r)')
+#(3,+1)
+ggplot(data = II_3_1,aes(x = `Atomic LapCP #`,y = `Vrep(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): Vrep')
+ggplot(data = II_3_1,aes(x = `Atomic LapCP #`,y = `Ven(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): Ven')
+ggplot(data = II_3_1,aes(x = `Atomic LapCP #`,y = `G(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): G(r)')
+ggplot(data = II_3_1,aes(x = `Atomic LapCP #`,y = `K(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): K(r)')
+#Molecula
+ggplot(data=clase_II,aes(x = `Molecula`,y = `N`)) + geom_point() + ggtitle('N(A)')
+ggplot(data=clase_II,aes(x = `Molecula`,y = `X.Q.`)) + geom_point() + ggtitle('|Q|')
+ggplot(data=clase_II,aes(x = `Molecula`,y = `q`)) + geom_point() + ggtitle('q')
+ggplot(data=clase_II,aes(x = `Molecula`,y = `Ven`)) + geom_point() + ggtitle('Ven')
+ggplot(data=clase_II,aes(x = `Molecula`,y = `K`)) + geom_point() + ggtitle('K')
+ggplot(data=clase_II,aes(x = `Molecula`,y = `L`)) + geom_point() + ggtitle('L')
+#PROPIEDAD MOLECULA
+prop_mol_II  <- propiedades_moleculas %>% filter(`clase` == 2)
+ggplot(data = prop_mol_II,mapping = aes(x = `No`, y = `Q1`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('Q1(tipo II)')
+ggplot(data = prop_mol_II,mapping = aes(x = `No`, y = `Q2`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`)))  + ggtitle('Q2(tipo II)')
+ggplot(data = prop_mol_II,mapping = aes(x = `No`, y = `Q3`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`)))  + ggtitle('Q3(tipo II)')
+ggplot(data = prop_mol_II,mapping = aes(x = `No`, y = `q`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`)))  + ggtitle('q(tipo II)')
+ggplot(data = prop_mol_II,mapping = aes(x = `No`, y = `N`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`)))  + ggtitle('N(tipo II)')
+
+```
+### CLASE IV
+
+```{r - Analisis de clase IV,echo=FALSE}
+#(3,+3)
+ggplot(data = IV_3_3,aes(x = `Atomic LapCP #`,y = `Vrep(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): Vrep')
+ggplot(data = IV_3_3,aes(x = `Atomic LapCP #`,y = `Ven(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): Ven')
+ggplot(data = IV_3_3,aes(x = `Atomic LapCP #`,y = `G(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): G(r)')
+ggplot(data = IV_3_3,aes(x = `Atomic LapCP #`,y = `K(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+3): K(r)')
+#(3,+1)
+ggplot(data = IV_3_1,aes(x = `Atomic LapCP #`,y = `Vrep(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): Vrep')
+ggplot(data = IV_3_1,aes(x = `Atomic LapCP #`,y = `Ven(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): Ven')
+ggplot(data = IV_3_1,aes(x = `Atomic LapCP #`,y = `G(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): G(r)')
+ggplot(data = IV_3_1,aes(x = `Atomic LapCP #`,y = `K(r)`,colour = `Atom`)) + geom_point() + scale_colour_viridis_d() + ggtitle('(3,+1): K(r)')
+#Molecula
+ggplot(data=clase_IV,aes(x = `Molecula`,y = `N`)) + geom_point() + ggtitle('N(A)')
+ggplot(data=clase_IV,aes(x = `Molecula`,y = `X.Q.`)) + geom_point() + ggtitle('|Q|')
+ggplot(data=clase_IV,aes(x = `Molecula`,y = `q`)) + geom_point() + ggtitle('q')
+ggplot(data=clase_IV,aes(x = `Molecula`,y = `Ven`)) + geom_point() + ggtitle('Ven')
+ggplot(data=clase_IV,aes(x = `Molecula`,y = `K`)) + geom_point() + ggtitle('K')
+ggplot(data=clase_IV,aes(x = `Molecula`,y = `L`)) + geom_point() + ggtitle('L')
+#PROPIEDAD MOLECULA
+prop_mol_IV  <- propiedades_moleculas %>% filter(`clase` == 4)
+ggplot(data = prop_mol_IV,mapping = aes(x = `No`, y = `Q1`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('Q1(tipo IV)')
+ggplot(data = prop_mol_IV,mapping = aes(x = `No`, y = `Q2`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('Q2(tipo IV)')
+ggplot(data = prop_mol_IV,mapping = aes(x = `No`, y = `Q3`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`))) + ggtitle('Q3(tipo IV)')
+ggplot(data = prop_mol_IV,mapping = aes(x = `No`, y = `q`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`)))  + ggtitle('q(tipo IV)')
+ggplot(data = prop_mol_IV,mapping = aes(x = `No`, y = `N`)) + geom_line() + geom_point(aes(colour = factor(`Molecula`)))  + ggtitle('N(tipo IV)')
+
+
+```
+
+### Promedio CP graficas geometrias
+
+```{r - promedio valores puntos criticos,echo=FALSE}
+
+propiedades_prom_CP1 <- propiedades_prom_CP %>% filter(`LapCP Type` == '(3,+3)' ) %>% na.omit()
+propiedades_prom_CP2 <- propiedades_prom_CP %>% filter(`LapCP Type` == '(3,+1)' ) %>% na.omit()
+#Graficas (3,+1)
+ggplot(data = propiedades_prom_CP2,mapping = aes(x = `No`,y = `DistFromNuc`,colour = `Atom`)) + geom_point() + ggtitle('Valores promedio distancia por CP:(3,+1)')
+
+#Graficas (3,+3)
+ggplot(data = propiedades_prom_CP1,mapping = aes(x = `DistFromNuc`,y = `DelSqRho`,colour = `Clase`)) + geom_line() + geom_point() + ggtitle('promedio DistFromNuc vs DelSqRho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","gray","navy"))
+ggplot(data = propiedades_prom_CP1,mapping = aes(x = `K(r)`,y = `L(r)`,colour = `Clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","gray","navy"))
+ggplot(data = propiedades_prom_CP1,mapping = aes(x = `K(r)`,y = `G(r)`,colour = `Clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs G(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","gray","navy"))
+ggplot(data = propiedades_prom_CP1,mapping = aes(x = `K(r)`,y = `Vrep(r)`,colour = `Clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","gray","navy"))
+
+
+#MAPA DE CALOR DE CORRELACION DE VARIABLES.
+df2 <- propiedades_prom_CP %>% subset(select = c(`No`,`Clase`,`Atom_no`,`LaCP_type_no`,`DistFromNuc`,`Rho`,`DelSqRho`,`Ven(r)`,`Vrep(r)`,`G(r)`,`K(r)`,`L(r)`)) %>% na.omit()  
+cor2 <- round(cor(df2),2) 
+melt_cor2 <- melt(cor2)
+ggplot(data = melt_cor2, aes(x=Var1, y=Var2,fill=value)) + geom_tile() + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) + geom_text(aes(Var2, Var1, label = value),color = "black", size = 3)
+
+#Exportar LaTeX: print(xtable(newobject2, type = "latex"), file = "filename2.tex")
+
+```
+# Cu-phen
+
+### propiedades la molecula
+
+gráficas del comportamiento de las propiedades de la molécula en transicion de estados.
+
+```{r - propiedades Cu-phen molecula,echo=FALSE}
+#scale_colour_manual(values = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Ven`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Ven: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Vee`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vee: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Ee`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Ee: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `DI`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('DI: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `L`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('L: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `K`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('K: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Mu_Intra`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Mu_Intra: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `T`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('T: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `|Q|`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('|Q|: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `LI`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('LI: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Delta(Ven)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('delta(Ven): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Delta(Vee)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('delta(Vee): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `N`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('N(A): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Delta(N)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('delta(N(A)): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Delta(q)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('delta(q): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Q1`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Q1: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Q2`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Q2: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Q3`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Q3: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `q`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('q(A): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Vnn`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vnn: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `q+Q1`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('q+Q1: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `q+Q2`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('q+Q2: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `q+Q3`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('q+Q3: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Vol(A)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vol(A): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `%N(Vol(A))`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('%N(Vol(A)): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `q`, y = `Vol(A)`,colour = `No`)) + geom_line() + geom_point() + ggtitle('Vol vs q por transicion: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `q`, y = `Vol(A)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vol vs q por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `N`, y = `Vol(A)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('N vs Vol por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `%N(Vol(A))`, y = `q`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('%N(Vol(A)) vs q por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `%N(Vol(A))`, y = `G`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('%N(Vol(A)) vs G por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Q_ZZ`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Q_ZZ: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Q_YY`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Q_YY: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `No`, y = `Q_XX`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Q_XX: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `q`, y = `Q_XX`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('q vs Q_XX por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `q`, y = `Q_XX`,colour = `No`)) + geom_line() + geom_point() + ggtitle('q vs Q_XX por transicion: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `Vee+Vnn`, y = `Ven`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vrep vs Ven por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `Vee+Vnn`, y = `Ven`,colour = `No`)) + geom_line() + geom_point() + ggtitle('Vrep vs Ven por transicion: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `q`, y = `Ven`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('q vs Ven por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `q`, y = `Ven`,colour = `No`)) + geom_line() + geom_point() + ggtitle('q vs Ven por transicion: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `q`, y = `Vee+Vnn`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('q vs Vrep por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `q`, y = `Vee+Vnn`,colour = `No`)) + geom_line() + geom_point() + ggtitle('q vs Vrep por transicion: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen,mapping = aes(x = `Vol(A)`, y = `Q_XX`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vol(A) vs Q_XX por clase: s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+#graficando los tres valores propios y modificando los datos.
+propiedades_Cu_phen1 <- propiedades_Cu_phen %>% subset(select = c(`No`,`Estado`,`clase`,`Q1`,`Q2`,`Q3`))
+prop_Cu_phen_long <- propiedades_Cu_phen1 %>% pivot_longer(cols =  c(`Q1`,`Q2`,`Q3`),names_to = c('Q1_Q2_Q3'),values_to = "value")
+ggplot(data = prop_Cu_phen_long,mapping = aes(x = `No`, y = `value`,group = `Q1_Q2_Q3`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('(Q1,Q2,Q3): s0 a s20') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+#MAPA DE CALOR CORRELACION.
+df1 <- propiedades_Cu_phen %>% subset(select = c(`No`,`Estado_no`,`clase`,`N`,`LI`,`%Loc`,`DI`,`%Deloc`,`Q1`,`Q2`,`Q3`,`Q_XX`,`Q_XY`,`Q_XZ`,`Q_YY`,`Q_YZ`,`Q_ZZ`,`DI_NonBond`,`Vnn`,`VeeC`,`q`,`L`,`K`,`K_Scaled`,`Mu_Intra`,`Ee`,`T`,`Ven`,`Vee`,`|Q|`,`Delta(Ven)`,`Delta(Vee)`,`Delta(N)`,`Delta(q)`,`q+Q1`,`q+Q2`,`q+Q3`,`Vol(A)`,`%N(Vol(A))`,`G`,`Vee+Vnn`,`Ven+Vee+Vnn`))
+cor1 <- round(cor(df1),2)
+melt_cor1 <- melt(cor1)
+ggplot(data = melt_cor1, aes(x=Var1, y=Var2,fill=value)) + geom_tile() + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) + geom_text(aes(Var2, Var1, label = value),color = "black", size = 1)
+
+```
+
+
+creando una grafica dirigida del comportamiento de los datos del Cu-phen.
+
+```{r - digrafica Vee y Ven Cu phen,echo=FALSE}
+
+df_transicion_Cu_phen <- data.frame(from = c("s0","s1,s2,s19","s1,s2,s19","s3","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s7,s8","s7,s8","s4,s5,s6,s9,s12,s13,s14,s15","s10","s11,s20","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s16","s17","s18","s1,s2,s19"),
+                                           to = c("s1,s2,s19","s1,s2,s19","s3","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s7,s8","s7,s8","s4,s5,s6,s9,s12,s13,s14,s15","s10","s11,s20","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s4,s5,s6,s9,s12,s13,s14,s15","s16","s17","s18","s1,s2,s19","s11,s20")
+                                           )
+df_transicion_Cu_phen_nodos <- data.frame(from = c(1,2,2,3,4,4,5,5,4,6,7,4,8,9,10),
+                                          to = c(2,2,3,4,4,5,5,4,6,7,4,8,9,10,2))
+digrafica_transicion_Cu_phen <- graph_from_data_frame(df_transicion_Cu_phen,directed = TRUE)
+digrafica_Cu_phen_nodos <- graph_from_data_frame(df_transicion_Cu_phen_nodos,directed = TRUE)
+df_Cu_phen_Vee_Ven <- data.frame(from = c("(-4724.416,1045.583)","(-4703.771,1034.45)","(-4703.771,1034.45)","(-4709.425,1036.054)","(-4706.087,1035.799)","(-4706.087,1035.799)","(-4716.194,1042.0255)","(-4716.194,1042.0255)","(-4706.087,1035.799)","(-4707.694,1036.255)","(-4707.675,1036.688)","(-4706.087,1035.799)","(-4709.558,1037.934)","(-4711.174,1038.911)","-4711.115,1038.875"),
+                                          to = c("(-4703.771,1034.45)","(-4703.771,1034.45)","(-4709.425,1036.054)","(-4706.087,1035.799)","(-4706.087,1035.799)","(-4716.194,1042.0255)","(-4716.194,1042.0255)","(-4706.087,1035.799)","(-4707.694,1036.255)","(-4707.675,1036.688)","(-4706.087,1035.799)","(-4709.558,1037.934)","(-4711.174,1038.911)","-4711.115,1038.875","(-4703.771,1034.45)"))
+digrafica_Cu_phen_Vee_Ven <- graph_from_data_frame(df_Cu_phen_Vee_Ven)
+
+propiedades_Cu_phen <- 
+
+#plot(digrafica_Cu_phen_nodos)
+#plot(digrafica_Cu_phen_Vee_Ven)
+propiedades_Cu_phen %>% mutate('Vne/T' = `Ven`/`T` ) 
+
+```
+
+### propiedades Cu-phen CP
+
+```{r - propiedades Cu-phen en CP,echo=FALSE}
+
+#Filtro para separar datos entre puntos (3,+3) y (3,+1)
+propiedades_Cu_phen_CP1 <- propiedades_Cu_phen_CP %>% filter(`LapCP Type` == '(3,+3)' )
+propiedades_Cu_phen_CP2 <- propiedades_Cu_phen_CP %>% filter(`LapCP Type` == '(3,+1)' )
+#Graficas con puntos (3,+1)
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `No`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' distancia por clase CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `No`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Vrep por clase CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `No`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Ven por clase CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `No`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' G(r) por clase CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' distancia vs L(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' distancia vs V(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' distancia vs Ven(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' distancia vs Vrep(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `L(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' L(r) vs K(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `L(r)`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' L(r) vs G(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `L(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' L(r) vs Rho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `K(r)`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' K(r) vs Vrep(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `K(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' K(r) vs Rho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `K(r)`,y = `Vnuc(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs Vnuc(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `V(r)`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' V(r) vs DelSqRho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `V(r)`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('V(r) vs Ven(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Vnuc(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vnuc(r) vs Rho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Vnuc(r)`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' (r) vs Vrep(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Vnuc(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vnuc(r) vs K(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Vnuc(r)`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vnuc(r) vs L(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Vrep(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vrep(r) vs K(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Vrep(r)`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vrep(r) vs L(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Ven(r)`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Ven(r) vs DistFromNuc CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Ven(r)`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Ven(r) vs DelSqRho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Ven(r)`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Ven(r) vs V(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DelSqRho`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('DelSqRho vs DistFromNuc CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DelSqRho`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('DelSqRho vs Ven(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DelSqRho`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('DelSqRho vs V(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Rho vs Vrep(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `Vnuc(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Rho vs Vnuc(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Rho vs G(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Rho vs K(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Rho vs L(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('DistFromNuc vs DelSqRho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('DistFromNuc vs Ven(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('DistFromNuc vs V(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `Ven/Vrep`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('DistFromNuc vs `Ven/Vrep` CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+#Grafica con puntos (3,+3)
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `No`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' distancia por clase CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `No`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Vrep por clase CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `No`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('Ven por clase CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `No`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('G(r) por clase CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('distancia vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('distancia vs V(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('distancia vs Ven(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('distancia vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `L(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('L(r) vs K(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `L(r)`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('L(r) vs G(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `L(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('L(r) vs Rho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `K(r)`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('K(r) vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `K(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' K(r) vs Rho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `K(r)`,y = `Vnuc(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' K(r) vs Vnuc(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `V(r)`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' V(r) vs DelSqRho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `V(r)`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' V(r) vs Ven(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Vnuc(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Vnuc(r) vs Rho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Vnuc(r)`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Vnuc(r) vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Vnuc(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Vnuc(r) vs K(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Vnuc(r)`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Vnuc(r) vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Vrep(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Vrep(r) vs K(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Vrep(r)`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Vrep(r) vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Ven(r)`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Ven(r) vs DistFromNuc CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Ven(r)`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Ven(r) vs DelSqRho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Ven(r)`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Ven(r) vs V(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DelSqRho`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' DelSqRho vs DistFromNuc CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DelSqRho`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' DelSqRho vs Ven(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DelSqRho`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' DelSqRho vs V(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Rho vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `Vnuc(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Rho vs Vnuc(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Rho vs G(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Rho vs K(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' Rho vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' DistFromNuc vs DelSqRho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' DistFromNuc vs Ven(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' DistFromNuc vs V(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `Ven/Vrep`,colour = `clase`)) + geom_line() + geom_point() + ggtitle(' DistFromNuc vs `Ven/Vrep` CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+#MAPA DE CALOR DE CORRELACION DE VARIABLES.
+df4 <- propiedades_Cu_phen_CP %>% subset(select = c(`No`,`No_CP`,`clase`,`X`,`Y`,`Z`,`|GradDelSqRho|`,`estado_no`,`LaCP_type_no`,`DistFromNuc`,`Rho`,`DelSqRho`,`Ven(r)`,`Vrep(r)`,`Vnuc(r)`,`V(r)`,`G(r)`,`K(r)`,`L(r)`)) %>% na.omit()  
+cor4 <- round(cor(df4),2) 
+melt_cor4 <- melt(cor4)
+ggplot(data = melt_cor4, aes(x=Var1, y=Var2,fill=value)) + geom_tile() + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) + geom_text(aes(Var2, Var1, label = value),color = "black", size = 1)
+
+```
+
+### promedio valores CP:
+
+```{r - propiedades Cu-phen en CP PROMEDIO,echo=FALSE}
+
+#Filtro para separar datos entre puntos (3,+3) y (3,+1)
+propiedades_prom_Cu_phen_CP1 <- propiedades_prom_Cu_phen_CP %>% filter(`LapCP Type` == '(3,+3)' )
+propiedades_prom_Cu_phen_CP2 <- propiedades_prom_Cu_phen_CP %>% filter(`LapCP Type` == '(3,+1)' )
+#Graficas con puntos (3,+1)
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `No`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia por clase CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `No`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vrep por clase CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `No`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Ven por clase CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `No`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio G(r) por clase CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia vs L(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia vs V(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia vs Ven(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia vs Vrep(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `L(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio L(r) vs K(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `L(r)`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio L(r) vs G(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `L(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio L(r) vs Rho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `K(r)`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs Vrep(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `K(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs Rho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `K(r)`,y = `Vnuc(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs Vnuc(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `V(r)`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio V(r) vs DelSqRho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `V(r)`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio V(r) vs Ven(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Vnuc(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vnuc(r) vs Rho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Vnuc(r)`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vnuc(r) vs Vrep(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Vnuc(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vnuc(r) vs K(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Vnuc(r)`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vnuc(r) vs L(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Vrep(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vrep(r) vs K(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Vrep(r)`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vrep(r) vs L(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Ven(r)`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Ven(r) vs DistFromNuc CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Ven(r)`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Ven(r) vs DelSqRho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Ven(r)`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Ven(r) vs V(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DelSqRho`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DelSqRho vs DistFromNuc CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DelSqRho`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DelSqRho vs Ven(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DelSqRho`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DelSqRho vs V(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs Vrep(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `Vnuc(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs Vnuc(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs G(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs K(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `Rho`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs L(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DistFromNuc vs DelSqRho CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DistFromNuc vs Ven(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP2,mapping = aes(x = `DistFromNuc`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DistFromNuc vs V(r) CP:(3,+1)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+#Grafica con puntos (3,+3)
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `No`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia por clase CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `No`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vrep por clase CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `No`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Ven por clase CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `No`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio G(r) por clase CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia vs V(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia vs Ven(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio distancia vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `L(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio L(r) vs K(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `L(r)`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio L(r) vs G(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `L(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio L(r) vs Rho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `K(r)`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `K(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs Rho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `K(r)`,y = `Vnuc(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio K(r) vs Vnuc(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `V(r)`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio V(r) vs DelSqRho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `V(r)`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio V(r) vs Ven(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Vnuc(r)`,y = `Rho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vnuc(r) vs Rho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Vnuc(r)`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vnuc(r) vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Vnuc(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vnuc(r) vs K(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Vnuc(r)`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vnuc(r) vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Vrep(r)`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vrep(r) vs K(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Vrep(r)`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Vrep(r) vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Ven(r)`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Ven(r) vs DistFromNuc CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Ven(r)`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Ven(r) vs DelSqRho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Ven(r)`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Ven(r) vs V(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DelSqRho`,y = `DistFromNuc`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DelSqRho vs DistFromNuc CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DelSqRho`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DelSqRho vs Ven(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DelSqRho`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DelSqRho vs V(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `Vrep(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs Vrep(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `Vnuc(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs Vnuc(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `G(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs G(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `K(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs K(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `Rho`,y = `L(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio Rho vs L(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `DelSqRho`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DistFromNuc vs DelSqRho CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `Ven(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DistFromNuc vs Ven(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+ggplot(data = propiedades_prom_Cu_phen_CP1,mapping = aes(x = `DistFromNuc`,y = `V(r)`,colour = `clase`)) + geom_line() + geom_point() + ggtitle('promedio DistFromNuc vs V(r) CP:(3,+3)') + scale_colour_gradientn(colours = c("red","blue","green","yellow","purple","pink","orange","lightgreen","gray","navy"))
+#MAPA DE CALOR DE CORRELACION DE VARIABLES.
+df5 <- propiedades_Cu_phen_CP %>% subset(select = c(`No`,`clase`,`estado_no`,`LaCP_type_no`,`DistFromNuc`,`Rho`,`DelSqRho`,`Ven(r)`,`Vrep(r)`,`Vnuc(r)`,`V(r)`,`G(r)`,`K(r)`,`L(r)`)) %>% na.omit()  
+cor5 <- round(cor(df5),2) 
+melt_cor5 <- melt(cor5)
+ggplot(data = melt_cor5, aes(x=Var1, y=Var2,fill=value)) + geom_tile() + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) + geom_text(aes(Var2, Var1, label = value),color = "black", size = 1)
+
+```
+
+
+# MATRICES DE PESO
+
+## GEOMETRIAS
+### CP Vrep
+```{r - determinantes matriz de adyacencia CP Vrep,echo=FALSE}
+lista_det_CP_Vrep <- sapply(lista_matrices_CP_Vrep, det)
+print(lista_det_CP_Vrep)
+```
+
+### CP Ven:
+```{r - determinantes matriz de adyacencia CP Ven,echo=FALSE}
+lista_det_CP_Ven <- sapply(lista_matrices_CP_Ven, det)
+print(lista_det_CP_Ven)
+```
+
+### T Vrep:
+```{r - determinantes matriz de adyacencia T Vrep,echo=FALSE}
+lista_det_T_Vrep <- sapply(lista_matrices_T_Vrep, det)
+print(lista_det_T_Vrep)
+```
+
+
+### T Ven:
+```{r - determinantes matriz de adyacencia T Ven,echo=FALSE}
+lista_det_T_Ven <- sapply(lista_matrices_T_Ven, det)
+print(lista_det_T_Ven)
+```
+
+
+## Cu-phen
+```{r - determinante matriz conectivdad Cu-phen,echo=FALSE}
+lista_det_Cu_phen <- sapply(lista_matrices_Cu_phen, det)
+print(lista_det_Cu_phen)
+
+```
+
+## Matrices de peso Cu-phen
+```{r - determinante matriz peso Cu-phen,echo=FALSE}
+lista_det_Cu_phen_r <- sapply(lista_matriz_Cu_phen_r, det)
+lista_det_Cu_phen_Rho <- sapply(lista_matriz_Cu_phen_Rho, det)
+lista_det_Cu_phen_DelSqRho <- sapply(lista_matriz_Cu_phen_DelSqRho, det)
+lista_det_Cu_phen_Ven <- sapply(lista_matriz_Cu_phen_Ven, det)
+lista_det_Cu_phen_Vrep <- sapply(lista_matriz_Cu_phen_Vrep, det)
+lista_det_Cu_phen_Vnuc <- sapply(lista_matriz_Cu_phen_Vnuc, det)
+lista_det_Cu_phen_V <- sapply(lista_matriz_Cu_phen_V, det)
+lista_det_Cu_phen_G <- sapply(lista_matriz_Cu_phen_G, det)
+lista_det_Cu_phen_K <- sapply(lista_matriz_Cu_phen_K, det)
+lista_det_Cu_phen_L <- sapply(lista_matriz_Cu_phen_L, det)
+print(lista_det_Cu_phen_r)
+print("")
+print(lista_det_Cu_phen_Rho)
+print("")
+print(lista_det_Cu_phen_DelSqRho)
+print("")
+print(lista_det_Cu_phen_Ven)
+print("")
+print(lista_det_Cu_phen_Vrep)
+print("")
+print(lista_det_Cu_phen_Vnuc)
+print("")
+print(lista_det_Cu_phen_V)
+print("")
+print(lista_det_Cu_phen_G)
+print("")
+print(lista_det_Cu_phen_K)
+print("")
+print(lista_det_Cu_phen_L)
+
+```
+## Propiedades graficas
+
+```{r - propiedades graficas Cu_phen,echo=FALSE}
+grado <- function(grafica){max(degree(grafica))}
+es_bipartita  <- function(grafica){bipartite_mapping(grafica)$res}
+numero_automorfismo  <- function(grafica){count_automorphisms(grafica)$group_size}
+lista_grado_Cu_phen <- sapply(lista_graficas_Cu_phen,grado)
+lista_laplaciana_Cu_phen <- sapply(lista_graficas_Cu_phen, laplacian_matrix)
+lista_det_laplaciana_Cu_phen <- sapply(lista_laplaciana_Cu_phen,det)
+lista_coefficiente_racimo <- sapply(lista_graficas_Cu_phen,transitivity)
+lista_triangulos <- sapply(lista_graficas_Cu_phen, count_triangles)
+lista_spectro <- sapply(lista_graficas_Cu_phen, spectrum)
+lista_diametro <- sapply(lista_graficas_Cu_phen, diameter)
+lista_radio <- sapply(lista_graficas_Cu_phen, radius)
+lista_excentricidad <- sapply(lista_graficas_Cu_phen, eccentricity)
+lista_bipartita <- sapply(lista_graficas_Cu_phen, es_bipartita)
+lista_automorfismo <- sapply(lista_graficas_Cu_phen,numero_automorfismo)
+lista_euleriano <- sapply(lista_graficas_Cu_phen,has_eulerian_cycle)
+lista_coloracion_Cu_phen <- sapply(lista_graficas_Cu_phen, num_color)
+#imprimiendo lista
+print("Grado maximo graficas")
+print(lista_grado_Cu_phen)
+print("determinante matriz laplaciana de graficas")
+print(lista_det_laplaciana_Cu_phen)
+print("determinante graficas de conectividad")
+print(lista_det_Cu_phen)
+print("Determinante de graficas atomicas con propiedad DistFromNuc")
+print(lista_det_Cu_phen_r)
+print("Coefficiente de Racimo/Cluster coefficient de la grafica")
+print(lista_coefficiente_racimo)
+print("Conteo de triangulos en graficas")
+print(lista_triangulos)
+print("Spectro de grafica (Valores Propios & Vectores propios)")
+print(lista_spectro)
+print("Diametro de grafica")
+print(lista_diametro)
+print("Excentricidad de grafica")
+print(lista_excentricidad)
+print("Es bipartita la grafica")
+print(lista_bipartita)
+print("Numero de automorfismo de la grafica")
+print(lista_automorfismo)
+print("Tiene ciclo euleriano")
+print(lista_euleriano)
+print("Lista Colores Cu-phen")
+print(lista_coloracion_Cu_phen)
+#imprimiendo lista
+
+```
+# Data Analisis
+
+```{r - analisis de datos,echo=FALSE}
+
+data <- read_excel('C:\\Users\\Hector Ramirez\\Documents\\codigo_python\\investigacion_graficas_atomicas\\datos\\datos.xlsx',sheet=1) #df con todos los datos.
+data <- data %>% na.omit()
+
+#agregar promedio por clase.
+
+
+
+```
+
+
+
+# Data Visualization
+
+```{r - graficos_tesis,echo=FALSE}
+# Grafica diagrama de pie de distribucion de clase de grafica.
+df <- data.frame(clase = c(1:14),count = c(17,21,7,5,5,1,1,1,2,8,3,3,1,1),stringsAsFactors = FALSE)
+
+
+ggpie3D(data = df, group_key = "clase", count_type = "count", tilt_degrees = -10, 
+        start_degrees = 180, label_size=2) + 
+  ggtitle("Distribucion de las graficas atomicas") + 
+  theme(plot.title = element_text(hjust = 0.5))
+# Grafica Estado de oxidacion vs Clase de grafica por geometria.
+df_clase <- data.frame(
+  estado_oxidacion = c("Co2","Cr2","Cr3","Cu2","Fe2","Fe3","Mn2","Mn3","Mn4","Ni2","Ni3","Sc2","Sc3","Ti2","Ti3","V2","V3","V4","Zn2"),
+  Octaedro= c(1,5,1,5,3,2,2,3,1,1,2,1,2,2,1,1,2,1,2),
+  Cuadrado_plano = c(1,2,1,5,1,5,6,2,1,5,1,4,4,4,2,1,2,2,5),
+  Tetraedro = c(2,2,2,7,1,4,4,2,2,1,1,3,9,9,8,2,2,3,9),
+  stringsAsFactors = FALSE
+)
+pivot_df <-
+  df_clase %>% 
+  pivot_longer(!estado_oxidacion)
+
+
+ggplot(pivot_df,aes(x=estado_oxidacion,y=value,group=name,color=name)) + 
+  scale_colour_manual(values = c("red", "blue","green")) +
+  scale_y_continuous(breaks=c(1:14)) +
+  geom_line() + 
+  geom_point() +
+  ggtitle("Estado de Oxidacion vs Clase de grafica") +
+  xlab("Estado de Oxidacion del Metal de Transicion") + ylab("Clase de Grafica")
+
+# Grafica de Estado excitado del cobre vs Clase de grafica 
+df_clase_Cu_phen <- data.frame(
+  estado_excitado = c("s0","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18","s19","s20"),
+  clase = c(9,3,3,5,10,10,10,11,11,10,12,12,10,10,10,10,11,9,14,3,12),
+  stringsAsFactors = FALSE
+)
+
+ggplot(df_clase_Cu_phen,aes(x=factor(estado_excitado,c("s0","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16","s17","s18","s19","s20")),y=clase,group=1)) + 
+  scale_y_continuous(breaks=c(1:14)) +
+  geom_line(colour="orange") + 
+  geom_point() +
+  ggtitle("Estado excitado del cobre vs Clase de grafica") +
+  xlab("Estado excitado del cobre") + ylab("Clase de Grafica")
+
+```
+
+
+
+```{r - visualizacion,echo=FALSE}
+
+datos <- df_CP %>% filter(`Atom` == c('s0','s20','s10'))
+viz_ven <- ggplot(datos, aes(x=`Atom`, y=`Ven(r)`,fill=`Atom`)) + 
+  geom_boxplot() +
+  stat_summary(fun = "mean", geom = "point", shape = 8,size = 2, color = "white") +
+  ggtitle('Distribucion de potencial atractivo por clase')
+
+viz_vrep <- ggplot(datos, aes(x=`Atom`, y=`Vrep(r)`,fill=`Atom`)) + 
+  geom_boxplot() +
+  stat_summary(fun = "mean", geom = "point", shape = 8,size = 2, color = "white") +
+  ggtitle('Distribucion de potencial repulsivo por clase')
+
+print(viz_ven)
+print(viz_vrep)
+
+```
+
+
