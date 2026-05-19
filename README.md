@@ -43,18 +43,17 @@ README.md
 2.2 Formatos y ejemplos
 2.3 Enlace a datos grandes o instrucciones para descargarlos / notebooks
 
-3.1 R_Notebook_analysis.ipynb (R Notebook) — generación de gráficas con igraph
-3.2 Jupyter_analysis.ipynb — análisis en Python (networkx/Network)
+3.1 cuaderno_graficas_atomicas.Rmd — generación de gráficas con igraph y integración scripts de construcción.
+3.2 graficas_atomicas_python.ipynb — análisis en Python (networkx/Network), Scikit-learn (modelos de aprendizaje usando los atributos de las graficas)
 3.3 Notebooks adicionales (EDA, visualización, modelado) / src
 
 4.1 R/
-4.1.1 scripts_igraph.R — creación y manipulación de grafos
-4.1.2 preprocessing_R.R — preparación y limpieza de datos
-4.1.3 descriptors_R.R — extracción de descriptores QTAIM y topológicos
+4.1.1 datos_graficas_atomicas.r, datos_graficas_atomiccas1.r — creación de grafos
+4.1.2 analisis_graficas_atomicas1.r  — preparación, limpieza de datos y obtencion de propiedades de grafica usando igraph
+4.1.3 graficos.r - Representación de las clases de graficas en las figuras geometricas platonicas en 3D.
 4.2 python/
-4.2.1 scripts_networks.py — creación y análisis de redes
-4.2.2 preprocessing_py.py — preparación y limpieza de datos
-4.2.3 descriptors_py.py — extracción de descriptores y funciones utilitarias / results
+4.2.1 datos_networks.py — creación y análisis de redes usando networkx
+4.2.2 datos_dic.py — preparación preparación de estructura de datos para procesos recursivos.
 
 5.1 Figuras y visualizaciones
 5.2 Tablas de descriptores
