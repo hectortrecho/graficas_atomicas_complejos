@@ -1,4 +1,4 @@
-# graficas_atomicas_complejos
+g graficas_atomicas_complejos
 estudia la relación entre geometría molecular y gráficas atómicas para predecir propiedades moleculares. Incluye visualizaciones y análisis de QTAIM
 
 
@@ -87,4 +87,6 @@ ANNEXES
 15.1 fragmentos de código destacables
 15.2 tablas completas de descriptores
 15.3 instrucciones para regenerar datos desde Gaussian16/AIMAll
+
+# Historial de Cambios.
 
