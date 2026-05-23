@@ -1,0 +1,42 @@
+Sender: LSF System <lsfadmin@mn297>
+Subject: Job 50005: <Zn21> in cluster <cluster1> Done
+
+Job <Zn21> was submitted from host <mn328> by user <daram_a> in cluster <cluster1>.
+Job was executed on host(s) <16*mn297>, in queue <q_htc>, as user <daram_a> in cluster <cluster1>.
+</home/fercor_g/daram_a> was used as the home directory.
+</tmpu/fercor_g/daram_a/spin/Zn> was used as the working directory.
+Started at Mon May 22 11:07:39 2017
+Results reported on Mon May 22 11:09:50 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+ #!/bin/bash
+#BSUB -oo Zn21
+#BSUB -eo Zn21
+#BSUB -q q_htc
+#BSUB -n 16
+#BSUB -J Zn21
+#BSUB -R "span[hosts=1]"
+export GAUSS_SCRDIR=$TMPU
+g09 Zn21
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1507.40 sec.
+    Max Memory :                                 29828.61 MB
+    Average Memory :                             14864.10 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   35548 MB
+    Max Processes :                              5
+    Max Threads :                                21
+
+The output (if any) follows:
+

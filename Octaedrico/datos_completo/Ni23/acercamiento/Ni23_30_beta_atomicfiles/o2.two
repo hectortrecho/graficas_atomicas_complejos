@@ -1,0 +1,438 @@
+  Mon May 22 16:56:39 2017
+
+
+          /*##########################################*/
+          /*                                          */
+          /*  --------------------------------------  */
+          /**          Welcome to @[TWOe].v13        **/
+          /*  --------------------------------------  */
+          /*  --[c]-P-a-v-e-l--P-o-l-e-s-t-s-h-u-k--  */
+          /*  --------------------------------------  */
+          /*  ------------||18-04-2016||------------  */
+          /*                                          */
+          /*##########################################*/
+
+
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ %%%% NOTE: Please, cite TWOe as:
+ %%%% a)J.Comp.Chem.,2013,v34,p206; b)J.Chem.Phys.,2013,v139,p054108;
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+ --- TWOe will use 8 threads on 'ferb' in parallel ---
+
+
+ *-- Summary of "wfn"-file data:
+
+ *--- JOB TITLE:
+    Ni23_30
+
+ *--- Number of Molecular Orbitals is:    86
+ *--- Number of Primitive Gaussians is:  500
+ *--- Number of Nuclei is:                19
+
+
+ *------------------------------------------*
+ *--- INTEGRATION ATOMIC GRID PARAMETERS ---*
+ *------------------------------------------*
+ * == 1-st ATOM  Rad.Grd.Lvl1:  Lvr1 =    3 *
+ * == ===LLG===  Na1 =   4334;  NaB1 =  974 *
+ *------------------------------------------*
+ *------- BIC/LAPL SERIES PARAMETERS -------*
+ *------------------------------------------*
+ * == ===UPS===  Lmx =     10;  Lcor =    0 *
+ *------------------------------------------*
+
+
+  --- Beta-Sphere Radii calculation ...
+
+  ---  # 1 R(beta) = 1.30;
+  ---  # 2 R(beta) = 1.20;
+  ---  # 3 R(beta) = 0.32;
+  ---  # 4 R(beta) = 0.32;
+  ---  # 5 R(beta) = 1.20;
+  ---  # 6 R(beta) = 0.32;
+  ---  # 7 R(beta) = 0.32;
+  ---  # 8 R(beta) = 1.20;
+  ---  # 9 R(beta) = 0.32;
+  ---  #10 R(beta) = 0.32;
+  ---  #11 R(beta) = 1.20;
+  ---  #12 R(beta) = 0.32;
+  ---  #13 R(beta) = 0.32;
+  ---  #14 R(beta) = 1.20;
+  ---  #15 R(beta) = 0.32;
+  ---  #16 R(beta) = 0.32;
+  ---  #17 R(beta) = 1.20;
+  ---  #18 R(beta) = 0.32;
+  ---  #19 R(beta) = 0.32;
+
+  ---  #  ---  #  ---  #  ---
+
+
+  **[TWOe]-mono Started For Atom 2!**
+
+  ==  -----------------------------------------
+  ==  Primitive CutOff Selection is Enabled:
+   *    for Beta-Sph Npt = 650
+   *    for Out-Beta Npt = 4017
+  ==  N(Prm) Totals :: {Bet,Wob} = {183,327}
+  ==  -----------------------------------------
+
+
+  == Atomic Surface will be Evaluated Using "TRNG" Routine ==
+
+ -Evaluation of Surface for Atom 2
+
+
+ ------------------------------------
+ --Searching Surface # 1 [BCP # 2]
+ ------------------------------------
+
+  ...BASE RAYS---::  | completed!
+  ...MESHED SURF-::  | 0% /\ /\ /\ /\ /\ /\ /\ 100%
+  ...
+  TOTAL NUMBER of INSERTED TRAJECTORIES:  316
+
+
+ ------------------------------------
+ --Searching Surface # 2 [BCP # 7]
+ ------------------------------------
+
+  ...BASE RAYS---::  | completed!
+  ...MESHED SURF-::  | 0% /\ /\ /\ /\ /\ /\ /\ 100%
+  ...
+  TOTAL NUMBER of INSERTED TRAJECTORIES:  42
+
+
+ ------------------------------------
+ --Searching Surface # 3 [BCP # 8]
+ ------------------------------------
+
+  ...BASE RAYS---::  | completed!
+  ...MESHED SURF-::  | 0% /\ /\ /\ /\ /\ /\ /\ 100%
+  ...
+  TOTAL NUMBER of INSERTED TRAJECTORIES:  8
+
+
+  Details of IAS construction :::  
+  -------------------------------  
+  ----totals of 0th order rays     776
+  ----totals of 1st order rays     3202
+  ----totals of 2nd order rays     63
+  ----totals of 3rd order rays     293
+  ----totals of 4th order rays     0
+  ----totals of 5th order rays     0
+  ----TOTAL-----------             4334
+
+  Surface Construction Done :)
+
+
+  Performing Integration of 1e-Properties :::
+  Beta Sphere Radial Integration [Nr = 150] ::: 
+  Beta Sphere has been Integrated ::: 
+  Outside of Beta Sphere Radial Integration [Nr = 50] ::: 
+  Outside of Beta Sphere has been Integrated ::: 
+
+
+  ++++++++++++++++++++++++++++++++++ ...
+  Producing radial Nodes and Weights ...
+  ++++++++++++++++++++++++++++++++++ ...
+
+  1. For Beta-Sphere Grid
+
+    Preparatory (rb0: 0.16) ... 
+    ... Done
+   *iter_  0;  dif = 2.44e-04;  alp = 1.0000;
+   *iter_  1;  dif = 3.62e-05;  alp = 0.5000;
+   *iter_  2;  dif = 4.51e-05;  alp = 0.2500;
+   *iter_  3;  dif = 6.41e-06;  alp = 0.3750;
+   ==================
+    +++ Nrb = 299
+   ==================
+
+  2. For Out-Beta-Sphere Grid
+
+  = Stage # 1: | 1 | 2 |
+  = Stage # 2: | 1 | 2 | 3 | 4 |
+  = Stage # 3: | 1 | 2 |
+  = Stage # 4: | 1 | 2 |
+  = Stage # 5: | 1 | 2 |
+  = Stage # 6: | 1 | 2 |
+   ==================
+    +++ Nr = 270
+   ==================
+
+ **Double Integration over [ang] in Beta-Sph for atom 2**
+
+ #### Calculation Will be Splitted into 1 step(s)!!!
+
+    --integration--    0%
+    --integration--   10%
+    --integration--   20%
+    --integration--   30%
+    --integration--   40%
+    --integration--   50%
+    --integration--   60%
+    --integration--   70%
+    --integration--   80%
+    --integration--   90%
+       --Done--      100%
+  #### STEP 1 Completed ####
+
+
+ **Full Complete**
+
+
+ **Double Integration over [ang] out Beta-Sph for atom 2**
+
+ #### Calculation Will be Splitted into 1 step(s)!!!
+
+    --integration--    0%
+    --integration--   10%
+    --integration--   20%
+    --integration--   30%
+    --integration--   40%
+    --integration--   50%
+    --integration--   60%
+    --integration--   70%
+    --integration--   80%
+    --integration--   90%
+       --Done--      100%
+  #### STEP 1 Completed ####
+
+
+ **Full Complete**
+
+
+ **Radial Integration over [r1 x r2] in Beta-Sph for atom 2**
+
+ Instant L is ::: 0
+ Instant L is ::: 1
+ Instant L is ::: 2
+ Instant L is ::: 3
+ Instant L is ::: 4
+ Instant L is ::: 5
+ Instant L is ::: 6
+ Instant L is ::: 7
+ Instant L is ::: 8
+ Instant L is ::: 9
+ Instant L is ::: 10
+   --FINISHED--
+
+  Convergence of Coulomb inregral over L,m inside the Beta Sphere:
+  L =  0  m =  0   J_Lm = 7.08153e+00   J_tot = 7.08153e+00;
+  L =  1  m =  0   J_Lm = 4.37612e-05   J_tot = 7.08157e+00;
+  L =  1  m =  1   J_Lm = 9.38480e-05   J_tot = 7.08167e+00;
+  L =  2  m =  0   J_Lm = 1.53182e-04   J_tot = 7.08182e+00;
+  L =  2  m =  2   J_Lm = 1.61866e-05   J_tot = 7.08185e+00;
+  L =  3  m = -3   J_Lm = 5.08083e-05   J_tot = 7.08190e+00;
+  L =  3  m =  0   J_Lm = 3.15578e-05   J_tot = 7.08194e+00;
+  L =  3  m =  1   J_Lm = 1.38438e-05   J_tot = 7.08195e+00;
+  L =  3  m =  3   J_Lm = 1.18822e-04   J_tot = 7.08208e+00;
+
+  Coulomb Energy inside Beta Sphere at Lmax=10 is 7.08210066
+
+  Convergence of XC-inregral over L,m inside the Beta Sphere:
+  L =  0  m =  0   K_Lm =-2.94545e+00   K_tot =-2.94545e+00;
+  L =  1  m = -1   K_Lm =-7.76677e-02   K_tot =-3.02312e+00;
+  L =  1  m =  0   K_Lm =-9.51974e-02   K_tot =-3.11832e+00;
+  L =  1  m =  1   K_Lm =-8.37446e-02   K_tot =-3.20206e+00;
+  L =  2  m = -2   K_Lm =-1.27074e-02   K_tot =-3.21477e+00;
+  L =  2  m = -1   K_Lm =-1.39325e-02   K_tot =-3.22870e+00;
+  L =  2  m =  0   K_Lm =-1.59677e-02   K_tot =-3.24467e+00;
+  L =  2  m =  1   K_Lm =-1.51995e-02   K_tot =-3.25987e+00;
+  L =  2  m =  2   K_Lm =-1.21589e-02   K_tot =-3.27203e+00;
+  L =  3  m = -3   K_Lm =-6.90462e-05   K_tot =-3.27210e+00;
+  L =  3  m = -2   K_Lm =-7.56792e-05   K_tot =-3.27217e+00;
+  L =  3  m = -1   K_Lm =-4.43488e-05   K_tot =-3.27222e+00;
+  L =  3  m =  0   K_Lm =-4.46082e-05   K_tot =-3.27226e+00;
+  L =  3  m =  1   K_Lm =-4.00016e-05   K_tot =-3.27230e+00;
+  L =  3  m =  2   K_Lm =-3.12718e-05   K_tot =-3.27233e+00;
+  L =  3  m =  3   K_Lm =-9.99147e-05   K_tot =-3.27243e+00;
+
+  XC-Energy inside Beta Sphere at Lmax=10 is -3.27246335
+
+  **COMPLETED**
+
+
+ **Radial Integration over [r1 x r2] out Beta-Sph for atom 2**
+
+ Instant L is ::: 0
+ Instant L is ::: 1
+ Instant L is ::: 2
+ Instant L is ::: 3
+ Instant L is ::: 4
+ Instant L is ::: 5
+ Instant L is ::: 6
+ Instant L is ::: 7
+ Instant L is ::: 8
+ Instant L is ::: 9
+ Instant L is ::: 10
+   --FINISHED--
+
+  Convergence of Coulomb inregral over L,m outside of Beta Sphere:
+  L =  0  m =  0   J_Lm = 7.56184e-01   J_tot = 7.56184e-01;
+  L =  1  m = -1   J_Lm = 5.67748e-05   J_tot = 7.56241e-01;
+  L =  1  m =  0   J_Lm = 6.31691e-04   J_tot = 7.56872e-01;
+  L =  1  m =  1   J_Lm = 1.12782e-03   J_tot = 7.58000e-01;
+  L =  2  m = -2   J_Lm = 1.74999e-05   J_tot = 7.58018e-01;
+  L =  2  m =  0   J_Lm = 1.52645e-04   J_tot = 7.58171e-01;
+  L =  2  m =  1   J_Lm = 8.04338e-05   J_tot = 7.58252e-01;
+  L =  2  m =  2   J_Lm = 1.36376e-04   J_tot = 7.58388e-01;
+  L =  3  m = -3   J_Lm = 1.30009e-04   J_tot = 7.58518e-01;
+  L =  3  m =  0   J_Lm = 8.85030e-05   J_tot = 7.58618e-01;
+  L =  3  m =  1   J_Lm = 4.16097e-05   J_tot = 7.58659e-01;
+  L =  3  m =  2   J_Lm = 1.87661e-05   J_tot = 7.58678e-01;
+  L =  3  m =  3   J_Lm = 3.04298e-04   J_tot = 7.58982e-01;
+  L =  4  m = -4   J_Lm = 5.13846e-05   J_tot = 7.59034e-01;
+  L =  4  m = -3   J_Lm = 2.60826e-05   J_tot = 7.59060e-01;
+  L =  4  m =  0   J_Lm = 1.40329e-05   J_tot = 7.59074e-01;
+  L =  4  m =  1   J_Lm = 3.59394e-05   J_tot = 7.59110e-01;
+  L =  4  m =  3   J_Lm = 5.35160e-05   J_tot = 7.59171e-01;
+  L =  4  m =  4   J_Lm = 4.94608e-05   J_tot = 7.59221e-01;
+  L =  5  m = -4   J_Lm = 1.99029e-05   J_tot = 7.59242e-01;
+  L =  5  m =  0   J_Lm = 4.06315e-05   J_tot = 7.59291e-01;
+  L =  5  m =  3   J_Lm = 1.30917e-05   J_tot = 7.59314e-01;
+  L =  5  m =  4   J_Lm = 2.51635e-05   J_tot = 7.59339e-01;
+  L =  6  m = -6   J_Lm = 4.55110e-05   J_tot = 7.59386e-01;
+  L =  6  m = -3   J_Lm = 1.52014e-05   J_tot = 7.59405e-01;
+  L =  6  m =  1   J_Lm = 1.51558e-05   J_tot = 7.59421e-01;
+  L =  6  m =  3   J_Lm = 3.36094e-05   J_tot = 7.59455e-01;
+  L =  7  m = -7   J_Lm = 2.48548e-05   J_tot = 7.59489e-01;
+  L =  7  m = -6   J_Lm = 2.04461e-05   J_tot = 7.59510e-01;
+  L =  7  m =  0   J_Lm = 1.05823e-05   J_tot = 7.59528e-01;
+  L =  8  m = -7   J_Lm = 1.16554e-05   J_tot = 7.59555e-01;
+
+  Coulomb Energy outside of Beta Sphere at Lmax=10 is 0.75960582
+
+  Convergence of XC-inregral over L,m outside of Beta Sphere:
+  L =  0  m =  0   K_Lm =-1.88892e-01   K_tot =-1.88892e-01;
+  L =  1  m = -1   K_Lm =-2.42883e-02   K_tot =-2.13180e-01;
+  L =  1  m =  0   K_Lm =-2.31469e-02   K_tot =-2.36327e-01;
+  L =  1  m =  1   K_Lm =-2.44593e-02   K_tot =-2.60787e-01;
+  L =  2  m = -2   K_Lm =-7.49036e-03   K_tot =-2.68277e-01;
+  L =  2  m = -1   K_Lm =-7.14549e-03   K_tot =-2.75422e-01;
+  L =  2  m =  0   K_Lm =-7.66899e-03   K_tot =-2.83091e-01;
+  L =  2  m =  1   K_Lm =-7.56231e-03   K_tot =-2.90654e-01;
+  L =  2  m =  2   K_Lm =-6.88621e-03   K_tot =-2.97540e-01;
+  L =  3  m = -3   K_Lm =-1.69763e-04   K_tot =-2.97710e-01;
+  L =  3  m = -2   K_Lm =-1.89395e-04   K_tot =-2.97899e-01;
+  L =  3  m = -1   K_Lm =-1.20576e-04   K_tot =-2.98020e-01;
+  L =  3  m =  0   K_Lm =-1.05295e-04   K_tot =-2.98125e-01;
+  L =  3  m =  1   K_Lm =-1.03298e-04   K_tot =-2.98228e-01;
+  L =  3  m =  2   K_Lm =-8.74336e-05   K_tot =-2.98316e-01;
+  L =  3  m =  3   K_Lm =-2.41984e-04   K_tot =-2.98558e-01;
+  L =  4  m = -4   K_Lm =-4.52421e-05   K_tot =-2.98603e-01;
+  L =  4  m = -3   K_Lm =-1.76037e-05   K_tot =-2.98621e-01;
+  L =  4  m = -2   K_Lm =-2.11178e-05   K_tot =-2.98642e-01;
+  L =  4  m = -1   K_Lm =-3.11996e-05   K_tot =-2.98673e-01;
+  L =  4  m =  0   K_Lm =-1.37922e-05   K_tot =-2.98687e-01;
+  L =  4  m =  1   K_Lm =-1.92078e-05   K_tot =-2.98706e-01;
+  L =  4  m =  3   K_Lm =-3.06879e-05   K_tot =-2.98746e-01;
+  L =  4  m =  4   K_Lm =-4.25164e-05   K_tot =-2.98788e-01;
+  L =  5  m = -5   K_Lm =-2.27948e-05   K_tot =-2.98811e-01;
+  L =  5  m = -4   K_Lm =-1.79654e-05   K_tot =-2.98829e-01;
+  L =  5  m = -2   K_Lm =-2.85589e-05   K_tot =-2.98862e-01;
+  L =  5  m =  0   K_Lm =-1.92814e-05   K_tot =-2.98887e-01;
+  L =  5  m =  4   K_Lm =-2.14920e-05   K_tot =-2.98929e-01;
+  L =  5  m =  5   K_Lm =-3.97818e-05   K_tot =-2.98969e-01;
+  L =  6  m = -6   K_Lm =-2.54689e-05   K_tot =-2.98994e-01;
+  L =  6  m = -5   K_Lm =-1.08881e-05   K_tot =-2.99005e-01;
+  L =  6  m = -1   K_Lm =-1.45762e-05   K_tot =-2.99036e-01;
+  L =  6  m =  3   K_Lm =-1.70276e-05   K_tot =-2.99065e-01;
+  L =  6  m =  5   K_Lm =-1.84041e-05   K_tot =-2.99085e-01;
+  L =  6  m =  6   K_Lm =-1.29934e-05   K_tot =-2.99098e-01;
+  L =  7  m = -7   K_Lm =-1.27448e-05   K_tot =-2.99111e-01;
+  L =  7  m = -6   K_Lm =-1.17415e-05   K_tot =-2.99123e-01;
+
+  XC-Energy outside of Beta Sphere at Lmax=10 is -0.29925161
+
+  **COMPLETED**
+
+
+ **Radial Mixed Integration over [r1 x r2] for atom 2**
+
+ Instant L is ::: 0
+ Instant L is ::: 1
+ Instant L is ::: 2
+ Instant L is ::: 3
+ Instant L is ::: 4
+ Instant L is ::: 5
+ Instant L is ::: 6
+ Instant L is ::: 7
+ Instant L is ::: 8
+ Instant L is ::: 9
+ Instant L is ::: 10
+   --FINISHED--
+
+  Convergence of Mixed Coulomb inregral over L,m:
+  L =  0  m =  0   J_Lm = 2.94681e+00   J_tot = 2.94681e+00;
+  L =  1  m = -1   J_Lm = 1.92519e-05   J_tot = 2.94683e+00;
+  L =  1  m =  0   J_Lm =-1.38955e-05   J_tot = 2.94682e+00;
+  L =  1  m =  1   J_Lm = 4.31546e-04   J_tot = 2.94725e+00;
+  L =  2  m =  0   J_Lm =-3.17643e-05   J_tot = 2.94722e+00;
+  L =  2  m =  1   J_Lm = 1.18791e-05   J_tot = 2.94723e+00;
+  L =  3  m = -3   J_Lm = 7.52488e-05   J_tot = 2.94731e+00;
+  L =  3  m =  0   J_Lm = 4.92480e-05   J_tot = 2.94737e+00;
+  L =  3  m =  1   J_Lm = 2.04272e-05   J_tot = 2.94739e+00;
+  L =  3  m =  3   J_Lm = 1.77703e-04   J_tot = 2.94757e+00;
+
+  Mixed Coulomb Energy at Lmax=10 is 2.94760935
+
+  Convergence of Mixed XC-inregral over L,m:
+  L =  0  m =  0   K_Lm =-4.80751e-01   K_tot =-4.80751e-01;
+  L =  1  m = -1   K_Lm =-4.13975e-02   K_tot =-5.22149e-01;
+  L =  1  m =  0   K_Lm =-4.25158e-02   K_tot =-5.64665e-01;
+  L =  1  m =  1   K_Lm =-4.16736e-02   K_tot =-6.06338e-01;
+  L =  2  m = -2   K_Lm =-7.60805e-03   K_tot =-6.13946e-01;
+  L =  2  m = -1   K_Lm =-7.32859e-03   K_tot =-6.21275e-01;
+  L =  2  m =  0   K_Lm =-8.02300e-03   K_tot =-6.29298e-01;
+  L =  2  m =  1   K_Lm =-7.63644e-03   K_tot =-6.36934e-01;
+  L =  2  m =  2   K_Lm =-6.77404e-03   K_tot =-6.43708e-01;
+  L =  3  m = -3   K_Lm =-8.84596e-05   K_tot =-6.43797e-01;
+  L =  3  m = -2   K_Lm =-9.71236e-05   K_tot =-6.43894e-01;
+  L =  3  m = -1   K_Lm =-5.70116e-05   K_tot =-6.43951e-01;
+  L =  3  m =  0   K_Lm =-5.61305e-05   K_tot =-6.44007e-01;
+  L =  3  m =  1   K_Lm =-4.64819e-05   K_tot =-6.44054e-01;
+  L =  3  m =  2   K_Lm =-3.82851e-05   K_tot =-6.44092e-01;
+  L =  3  m =  3   K_Lm =-1.33988e-04   K_tot =-6.44226e-01;
+
+  Mixed XC-Energy at Lmax=10 is -0.64427381
+
+  **COMPLETED**
+
+
+
+  *---ATOMIC INTEGRATION RESULTS FOR ATOM - 2-------------------*
+  *-------------------------------------------------------------*
+  1)--Laplacian -1/4*Trace(H)  L ------------  = -7.20966330e-06
+  2)--Electron Population      N ------------  =  4.60586968e+00
+  3)--Atomic Charge            Q ------------  =  3.39413032e+00
+  4)--Gradient Kinetic Energy  KEG ----------  =  3.76962980e+01
+  5)--Laplacian Kinetic Energy KEK ----------  =  3.76962908e+01
+  6)--Electron-(own)Nucleus    Ven0 ---------  = -9.23422924e+01
+  7)--Electron-PartnerNucleus  Ven ----------  =  0.00000000e+00
+  8)--Electron-AllNuclei       VenT ---------  = -1.47232428e+02
+  9)--Coulomb 1c-Integral      J ------------  =  1.07893158e+01
+ 10)--Exch-Corr 1c-Integral    XC -----------  = -4.21598878e+00 by muller
+ 11)--Atomic Loc. Index        LI -----------  =  4.26026850e+00 by muller
+ 12)--Electron-Electron Inter  Vee0 ---------  =  6.57332704e+00
+ 13)--Internal Atomic Energy   Eat ----------  = -4.80726746e+01
+ 14)--Nucleus-PartnerNucleus   Vnn ----------  =  0.00000000e+00
+ 15)--Nucleus-AllNuclei        VnnT ---------  =  9.55776549e+01
+ 16)--Atomic Volume [0.001]    V ------------  =  1.27483614e+02
+ 17)--Atomic Dipole (x)        Dx -----------  =  2.92254976e-02
+ 18)--Atomic Dipole (y)        Dy -----------  = -1.09308349e-02
+ 19)--Atomic Dipole (z)        Dz -----------  = -1.06396247e-01
+ 20)--Norm of Atomic Dipole   |D| -----------  =  1.10877294e-01
+  *-------------------------------------------------------------*
+  *---ATOMIC INTEGRATION RESULTS FOR ATOM - 2-------------------*
+
+ Mon May 22 17:02:52 2017
+
+
+     *********************
+
+
+ **[TWOe]-mono completed successfully! Bye,Bye!**
+
