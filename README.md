@@ -1,4 +1,4 @@
-estudia la relación entre geometría molecular y gráficas atómicas para predecir propiedades moleculares. Incluye visualizaciones y análisis de QTAIM
+Estudio la relación entre la geometría molecular y las redes atómicas (gráficas moleculares) para predecir propiedades químicas. El proyecto incluye visualizaciones interactivas y análisis cuantitativo mediante QTAIM (Theory of Atoms in Molecules) para extraer descriptores electrónicos y estructurales.
 
 
 # Estudio de graficas atomicas generadas apartir del Laplaciano de la densidad electronica en complejos metálicos.
