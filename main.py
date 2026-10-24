@@ -13,6 +13,11 @@ Moleculas de estudio:
 ** OCTAHEDRAL: [Cu(H_{2}O)_{6}]^{2+} ; [Cu(NH_{3})_{6}]^{2+} ; [CuCl_{6}]^{4-}
 ** JAHN-TELLER ELONGATED: [Cu(H_{2}O)_{5}Cl]^{+}
 '''
+# Dic = {Molecula : [Geometria,carga,SMILE,Nivel de teoria]}
+obj_estudio = {
+    "Cu(NH3)2" : ["Lineal",2,"[Cu(NH3)2]2+","cc-PVTDZ"],
+    "" : 
+}
 #=====================================
 # Proceedimiento:
 #=====================================
