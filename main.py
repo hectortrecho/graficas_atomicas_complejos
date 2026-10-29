@@ -13,9 +13,21 @@ Moleculas de estudio:
 ** OCTAHEDRAL: [Cu(H_{2}O)_{6}]^{2+} ; [Cu(NH_{3})_{6}]^{2+} ; [CuCl_{6}]^{4-}
 ** JAHN-TELLER ELONGATED: [Cu(H_{2}O)_{5}Cl]^{+}
 '''
-# Dic = {Molecula : [Geometria,carga,SMILE,Nivel de teoria]}
-obj_estudio = {
-    "Cu(NH3)2" : ["Lineal",2,"[Cu(NH3)2]2+","cc-PVTDZ"],
+
+'''
+Cobre: [Ar] 3d10 4s1 ; Z=29
+Cu2+: 27 electrones
+N: [He] 2s2 2p3 ; Z=7
+H: 1s1 ; Z=1 
+C: [He] 2s2 2p2 ; Z=6
+O: [He] 2s2 2p4 ; Z=8
+Multiplicity=2S+1; no. of unpaired electrons of the molecule (as a whole system);S=n/2
+Dic = {Molecula : [Geometria,carga,electrones,spin,SMILE,ligante,Nivel de teoria]}
+'''
+
+dic_moleculas_estudio = {
+    "Cu(NH3)2" : ["Lineal",2,47,1,"[Cu(NH3)2]2+","NH3","cc-PVTDZ"],
+    "Cu(NH3)3" : ["Trigonal_plana",2,57,1,"[Cu(NH3)3]2+","NH3","cc-PVTDZ"],
     "" : 
 }
 #=====================================
